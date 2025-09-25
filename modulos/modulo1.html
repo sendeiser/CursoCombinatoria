@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 1: Principios Básicos de Conteo - Curso de Combinatoria</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Curso de Combinatoria</h1>
+            <p>Módulo 1: Principios Básicos de Conteo</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="modulo1.html" class="active">Módulo 1</a></li>
+                <li><a href="modulo2.html">Módulo 2</a></li>
+                <li><a href="modulo3.html">Módulo 3</a></li>
+                <li><a href="modulo4.html">Módulo 4</a></li>
+                <li><a href="../recursos/evaluaciones/evaluacion_final.html">Evaluación Final</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section class="module-header">
+                <h2>Principios Básicos de Conteo</h2>
+                <div class="progress-container">
+                    <div class="progress-bar" data-module-id="modulo1" style="width: 0%;"></div>
+                </div>
+                <p class="progress-indicator" data-module-id="modulo1">0% completado</p>
+            </section>
+
+            <section class="section-nav">
+                <h3>Contenido del Módulo</h3>
+                <ul>
+                    <li><a href="#seccion1" class="active">1.1 Introducción a la Combinatoria</a></li>
+                    <li><a href="#seccion2">1.2 Principio Multiplicativo</a></li>
+                    <li><a href="#seccion3">1.3 Principio Aditivo</a></li>
+                    <li><a href="#seccion4">1.4 Ejercicios Prácticos</a></li>
+                    <li><a href="#seccion5">1.5 Evaluación del Módulo</a></li>
+                </ul>
+            </section>
+
+            <section id="seccion1" class="module-section">
+                <h3>1.1 Introducción a la Combinatoria</h3>
+                <div class="module-content">
+                    <p>La combinatoria es una rama de las matemáticas que estudia las diferentes formas de contar y ordenar objetos. Es fundamental en diversas áreas como probabilidad, estadística, ciencias de la computación y teoría de la información.</p>
+                    
+                    <p>En este módulo, aprenderemos los principios básicos que nos permitirán resolver problemas de conteo de manera sistemática y eficiente.</p>
+                    
+                    <h4>Objetivos de Aprendizaje</h4>
+                    <ul>
+                        <li>Comprender la importancia de la combinatoria en la resolución de problemas.</li>
+                        <li>Identificar situaciones donde se aplican los principios de conteo.</li>
+                        <li>Aplicar el principio multiplicativo y aditivo en problemas sencillos.</li>
+                        <li>Desarrollar estrategias para abordar problemas combinatorios.</li>
+                    </ul>
+                    
+                    <h4>Aplicaciones de la Combinatoria</h4>
+                    <p>La combinatoria tiene numerosas aplicaciones en la vida cotidiana y en diversas disciplinas:</p>
+                    <ul>
+                        <li><strong>Probabilidad:</strong> Cálculo de posibilidades en juegos de azar, eventos aleatorios.</li>
+                        <li><strong>Informática:</strong> Análisis de algoritmos, criptografía, compresión de datos.</li>
+                        <li><strong>Biología:</strong> Secuenciación genética, estudio de proteínas.</li>
+                        <li><strong>Telecomunicaciones:</strong> Diseño de redes, codificación de señales.</li>
+                        <li><strong>Logística:</strong> Optimización de rutas, planificación de horarios.</li>
+                    </ul>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo1" data-section-id="seccion1">Marcar como completado</button>
+            </section>
+
+            <section id="seccion2" class="module-section" style="display: none;">
+                <h3>1.2 Principio Multiplicativo</h3>
+                <div class="module-content">
+                    <p>El principio multiplicativo (también conocido como regla del producto) es uno de los conceptos fundamentales en combinatoria. Este principio nos permite contar el número total de formas en que podemos realizar una secuencia de eventos.</p>
+                    
+                    <div class="definition">
+                        <h4>Definición: Principio Multiplicativo</h4>
+                        <p>Si una tarea se puede realizar en \(m\) formas diferentes, y después de realizarla, una segunda tarea se puede realizar en \(n\) formas diferentes, entonces las dos tareas en secuencia se pueden realizar en \(m \times n\) formas diferentes.</p>
+                    </div>
+                    
+                    <h4>Ejemplo 1:</h4>
+                    <p>Un restaurante ofrece 4 entradas, 6 platos principales y 3 postres. ¿Cuántos menús diferentes de tres tiempos (entrada, plato principal y postre) puede elegir un cliente?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Aplicando el principio multiplicativo:</p>
+                        <ul>
+                            <li>Número de opciones para la entrada: 4</li>
+                            <li>Número de opciones para el plato principal: 6</li>
+                            <li>Número de opciones para el postre: 3</li>
+                        </ul>
+                        <p>Número total de menús posibles = 4 × 6 × 3 = 72</p>
+                    </div>
+                    
+                    <h4>Ejemplo 2:</h4>
+                    <p>Una contraseña consiste en 2 letras mayúsculas seguidas de 3 dígitos. ¿Cuántas contraseñas diferentes son posibles?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Aplicando el principio multiplicativo:</p>
+                        <ul>
+                            <li>Número de opciones para la primera letra: 26 (A-Z)</li>
+                            <li>Número de opciones para la segunda letra: 26 (A-Z)</li>
+                            <li>Número de opciones para cada dígito: 10 (0-9)</li>
+                        </ul>
+                        <p>Número total de contraseñas posibles = 26 × 26 × 10 × 10 × 10 = 676,000</p>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo1" data-section-id="seccion2">Marcar como completado</button>
+            </section>
+
+            <section id="seccion3" class="module-section" style="display: none;">
+                <h3>1.3 Principio Aditivo</h3>
+                <div class="module-content">
+                    <p>El principio aditivo (también conocido como regla de la suma) es otro concepto fundamental en combinatoria. Este principio nos permite contar el número total de formas en que podemos realizar una tarea cuando tenemos varias opciones mutuamente excluyentes.</p>
+                    
+                    <div class="definition">
+                        <h4>Definición: Principio Aditivo</h4>
+                        <p>Si una tarea se puede realizar de \(m\) formas diferentes, y una segunda tarea se puede realizar de \(n\) formas diferentes, y no es posible realizar ambas tareas simultáneamente, entonces hay \(m + n\) formas diferentes de realizar una u otra tarea.</p>
+                    </div>
+                    
+                    <h4>Ejemplo 1:</h4>
+                    <p>En una biblioteca, hay 25 libros de matemáticas y 30 libros de física. ¿De cuántas formas diferentes puede un estudiante elegir un libro (suponiendo que solo puede elegir uno)?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Aplicando el principio aditivo:</p>
+                        <ul>
+                            <li>Número de opciones para elegir un libro de matemáticas: 25</li>
+                            <li>Número de opciones para elegir un libro de física: 30</li>
+                        </ul>
+                        <p>Número total de formas de elegir un libro = 25 + 30 = 55</p>
+                    </div>
+                    
+                    <h4>Ejemplo 2:</h4>
+                    <p>Un estudiante puede ir a la escuela en autobús, en bicicleta o caminando. Hay 3 rutas diferentes en autobús, 2 rutas diferentes en bicicleta y 1 ruta caminando. ¿De cuántas formas diferentes puede el estudiante ir a la escuela?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Aplicando el principio aditivo:</p>
+                        <ul>
+                            <li>Número de opciones para ir en autobús: 3</li>
+                            <li>Número de opciones para ir en bicicleta: 2</li>
+                            <li>Número de opciones para ir caminando: 1</li>
+                        </ul>
+                        <p>Número total de formas de ir a la escuela = 3 + 2 + 1 = 6</p>
+                    </div>
+                    
+                    <h4>Combinación de Principios</h4>
+                    <p>En muchos problemas de combinatoria, es necesario aplicar tanto el principio multiplicativo como el principio aditivo. Veamos un ejemplo:</p>
+                    
+                    <h4>Ejemplo 3:</h4>
+                    <p>Un estudiante puede elegir entre 3 cursos de matemáticas o 2 cursos de física. Si elige matemáticas, debe seleccionar 1 de 2 profesores disponibles. Si elige física, debe seleccionar 1 de 3 profesores disponibles. ¿Cuántas opciones diferentes tiene el estudiante?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Primero, aplicamos el principio multiplicativo para cada opción:</p>
+                        <ul>
+                            <li>Opciones para matemáticas: 3 cursos × 2 profesores = 6 combinaciones</li>
+                            <li>Opciones para física: 2 cursos × 3 profesores = 6 combinaciones</li>
+                        </ul>
+                        <p>Luego, aplicamos el principio aditivo para el total:</p>
+                        <p>Número total de opciones = 6 + 6 = 12</p>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo1" data-section-id="seccion3">Marcar como completado</button>
+            </section>
+
+            <section id="seccion4" class="module-section" style="display: none;">
+                <h3>1.4 Ejercicios Prácticos</h3>
+                <div class="module-content">
+                    <p>A continuación, se presentan algunos ejercicios para practicar los conceptos aprendidos en este módulo. Intenta resolverlos aplicando los principios multiplicativo y aditivo según corresponda.</p>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 1</h4>
+                        <p>Una heladería ofrece 8 sabores de helado, 3 tipos de conos y 4 coberturas opcionales. Si un cliente elige un sabor, un tipo de cono y decide si quiere o no una cobertura (y cuál), ¿cuántas combinaciones diferentes son posibles?</p>
+                        
+                        <form data-exercise-id="exercise1">
+                            <label for="ex1-answer">Tu respuesta:</label>
+                            <input type="number" id="ex1-answer" name="q1" min="1" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 2</h4>
+                        <p>Un estudiante debe elegir 3 cursos de un total de 7 cursos disponibles. ¿De cuántas formas diferentes puede hacer su elección?</p>
+                        
+                        <form data-exercise-id="exercise2">
+                            <label for="ex2-answer">Tu respuesta:</label>
+                            <input type="number" id="ex2-answer" name="q1" min="1" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 3</h4>
+                        <p>Una persona puede viajar de la ciudad A a la ciudad B por avión, tren o autobús. Hay 4 vuelos diarios, 3 trenes diarios y 2 autobuses diarios. ¿De cuántas formas diferentes puede la persona viajar de la ciudad A a la ciudad B en un día?</p>
+                        
+                        <form data-exercise-id="exercise3">
+                            <label for="ex3-answer">Tu respuesta:</label>
+                            <input type="number" id="ex3-answer" name="q1" min="1" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 4</h4>
+                        <p>En un examen de opción múltiple, hay 10 preguntas y cada una tiene 4 opciones (a, b, c, d). ¿Cuántas formas diferentes hay de responder el examen si se debe responder a todas las preguntas?</p>
+                        
+                        <form data-exercise-id="exercise4">
+                            <label for="ex4-answer">Tu respuesta:</label>
+                            <input type="number" id="ex4-answer" name="q1" min="1" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo1" data-section-id="seccion4">Marcar como completado</button>
+            </section>
+
+            <section id="seccion5" class="module-section" style="display: none;">
+                <h3>1.5 Evaluación del Módulo</h3>
+                <div class="module-content">
+                    <p>Completa la siguiente evaluación para verificar tu comprensión de los conceptos presentados en este módulo.</p>
+                    
+                    <div class="quiz">
+                        <h4>Evaluación del Módulo 1</h4>
+                        
+                        <form data-exercise-id="quiz1">
+                            <div class="question">
+                                <p><strong>1. ¿Cuál de los siguientes principios se utiliza cuando tenemos que elegir entre varias opciones mutuamente excluyentes?</strong></p>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="q1" value="a"> a) Principio multiplicativo
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q1" value="b"> b) Principio aditivo
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q1" value="c"> c) Principio de inclusión-exclusión
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q1" value="d"> d) Principio del palomar
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>2. Un código postal consiste en 3 letras seguidas de 2 dígitos. Si las letras pueden repetirse y los dígitos también, ¿cuántos códigos postales diferentes son posibles?</strong></p>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="q2" value="a"> a) 17,576,000
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q2" value="b"> b) 676,000
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q2" value="c"> c) 175,760
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q2" value="d"> d) 67,600
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>3. En una cafetería, se puede elegir entre 3 tipos de café, 2 tipos de té o 4 tipos de refrescos. ¿Cuántas bebidas diferentes puede elegir un cliente?</strong></p>
+                                <input type="number" name="q3" min="1" required>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>4. ¿Cuál de las siguientes afirmaciones es correcta sobre el principio multiplicativo?</strong></p>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="q4" value="a"> a) Se utiliza cuando las opciones son mutuamente excluyentes
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q4" value="b"> b) Se utiliza para contar el número total de formas de realizar una secuencia de eventos
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q4" value="c"> c) Siempre resulta en menos opciones que el principio aditivo
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q4" value="d"> d) No se puede combinar con el principio aditivo
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>5. Un estudiante debe elegir exactamente 2 cursos: uno de matemáticas y uno de ciencias. Si hay 4 cursos de matemáticas y 3 cursos de ciencias disponibles, ¿cuántas combinaciones diferentes de cursos puede elegir?</strong></p>
+                                <input type="number" name="q5" min="1" required>
+                            </div>
+                            
+                            <button type="submit" class="btn">Enviar Evaluación</button>
+                        </form>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo1" data-section-id="seccion5">Marcar como completado</button>
+            </section>
+
+            <section class="module-nav">
+                <a href="../index.html" class="btn">Volver al Inicio</a>
+                <a href="modulo2.html" class="btn">Siguiente Módulo: Permutaciones</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Curso de Combinatoria - Cuadernillo Interactivo</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

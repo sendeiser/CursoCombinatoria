@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2: Permutaciones - Curso de Combinatoria</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Curso de Combinatoria</h1>
+            <p>Módulo 2: Permutaciones</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="modulo1.html">Módulo 1</a></li>
+                <li><a href="modulo2.html" class="active">Módulo 2</a></li>
+                <li><a href="modulo3.html">Módulo 3</a></li>
+                <li><a href="modulo4.html">Módulo 4</a></li>
+                <li><a href="../recursos/evaluaciones/evaluacion_final.html">Evaluación Final</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section class="module-header">
+                <h2>Permutaciones</h2>
+                <div class="progress-container">
+                    <div class="progress-bar" data-module-id="modulo2" style="width: 0%;"></div>
+                </div>
+                <p class="progress-indicator" data-module-id="modulo2">0% completado</p>
+            </section>
+
+            <section class="section-nav">
+                <h3>Contenido del Módulo</h3>
+                <ul>
+                    <li><a href="#seccion1" class="active">2.1 Concepto de Permutación</a></li>
+                    <li><a href="#seccion2">2.2 Permutaciones sin Repetición</a></li>
+                    <li><a href="#seccion3">2.3 Permutaciones con Repetición</a></li>
+                    <li><a href="#seccion4">2.4 Ejercicios Prácticos</a></li>
+                    <li><a href="#seccion5">2.5 Evaluación del Módulo</a></li>
+                </ul>
+            </section>
+
+            <section id="seccion1" class="module-section">
+                <h3>2.1 Concepto de Permutación</h3>
+                <div class="module-content">
+                    <p>Una permutación es un arreglo ordenado de elementos donde el orden importa. En otras palabras, una permutación es una disposición específica de un conjunto de elementos donde cada elemento aparece exactamente una vez.</p>
+                    
+                    <div class="definition">
+                        <h4>Definición: Permutación</h4>
+                        <p>Una permutación de un conjunto de \(n\) elementos distintos es un ordenamiento de estos elementos en una secuencia específica.</p>
+                    </div>
+                    
+                    <p>Por ejemplo, si tenemos el conjunto {A, B, C}, las posibles permutaciones son:</p>
+                    <ul>
+                        <li>ABC</li>
+                        <li>ACB</li>
+                        <li>BAC</li>
+                        <li>BCA</li>
+                        <li>CAB</li>
+                        <li>CBA</li>
+                    </ul>
+                    
+                    <p>Observamos que hay 6 permutaciones posibles para un conjunto de 3 elementos.</p>
+                    
+                    <h4>Importancia del Orden</h4>
+                    <p>En las permutaciones, el orden de los elementos es crucial. Por ejemplo, ABC y CBA son permutaciones diferentes del mismo conjunto de elementos.</p>
+                    
+                    <h4>Aplicaciones de las Permutaciones</h4>
+                    <p>Las permutaciones tienen numerosas aplicaciones en diversos campos:</p>
+                    <ul>
+                        <li><strong>Criptografía:</strong> Diseño de algoritmos de cifrado.</li>
+                        <li><strong>Optimización:</strong> Problemas como el del viajante de comercio.</li>
+                        <li><strong>Estadística:</strong> Pruebas de permutación para análisis de datos.</li>
+                        <li><strong>Programación:</strong> Generación de todas las posibles ordenaciones.</li>
+                        <li><strong>Juegos y puzzles:</strong> Análisis de posibles configuraciones.</li>
+                    </ul>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo2" data-section-id="seccion1">Marcar como completado</button>
+            </section>
+
+            <section id="seccion2" class="module-section" style="display: none;">
+                <h3>2.2 Permutaciones sin Repetición</h3>
+                <div class="module-content">
+                    <p>Las permutaciones sin repetición se refieren a los diferentes ordenamientos que podemos formar con elementos donde cada elemento se utiliza exactamente una vez.</p>
+                    
+                    <div class="definition">
+                        <h4>Definición: Permutaciones sin Repetición</h4>
+                        <p>El número de permutaciones de \(n\) elementos distintos tomados de \(r\) en \(r\) (donde \(r \leq n\)) se denota como \(P(n,r)\) o \(P_r^n\) y se calcula mediante la fórmula:</p>
+                        <p>\[P(n,r) = \frac{n!}{(n-r)!}\]</p>
+                        <p>Donde \(n!\) (factorial de \(n\)) representa el producto de todos los enteros positivos menores o iguales a \(n\).</p>
+                    </div>
+                    
+                    <h4>Caso Especial: Permutaciones de todos los elementos</h4>
+                    <p>Cuando \(r = n\), es decir, cuando queremos permutar todos los elementos, la fórmula se simplifica a:</p>
+                    <p>\[P(n,n) = n!\]</p>
+                    
+                    <h4>Ejemplo 1:</h4>
+                    <p>¿De cuántas formas diferentes se pueden ordenar 5 libros en un estante?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Esto es una permutación de 5 elementos tomados de 5 en 5, por lo que:</p>
+                        <p>\[P(5,5) = 5! = 5 \times 4 \times 3 \times 2 \times 1 = 120\]</p>
+                        <p>Hay 120 formas diferentes de ordenar los 5 libros en el estante.</p>
+                    </div>
+                    
+                    <h4>Ejemplo 2:</h4>
+                    <p>En una carrera con 8 corredores, ¿de cuántas formas diferentes se pueden asignar las medallas de oro, plata y bronce?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Esto es una permutación de 8 elementos tomados de 3 en 3, por lo que:</p>
+                        <p>\[P(8,3) = \frac{8!}{(8-3)!} = \frac{8!}{5!} = \frac{8 \times 7 \times 6 \times 5!}{5!} = 8 \times 7 \times 6 = 336\]</p>
+                        <p>Hay 336 formas diferentes de asignar las medallas.</p>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo2" data-section-id="seccion2">Marcar como completado</button>
+            </section>
+
+            <section id="seccion3" class="module-section" style="display: none;">
+                <h3>2.3 Permutaciones con Repetición</h3>
+                <div class="module-content">
+                    <p>Las permutaciones con repetición se refieren a los diferentes ordenamientos que podemos formar cuando algunos elementos pueden repetirse.</p>
+                    
+                    <div class="definition">
+                        <h4>Definición: Permutaciones con Repetición</h4>
+                        <p>El número de permutaciones de \(n\) elementos donde hay \(n_1\) elementos de un tipo, \(n_2\) elementos de otro tipo, ..., y \(n_k\) elementos del último tipo (con \(n_1 + n_2 + ... + n_k = n\)) se calcula mediante la fórmula:</p>
+                        <p>\[PR(n; n_1, n_2, ..., n_k) = \frac{n!}{n_1! \times n_2! \times ... \times n_k!}\]</p>
+                    </div>
+                    
+                    <h4>Ejemplo 1:</h4>
+                    <p>¿Cuántas palabras diferentes (con o sin sentido) se pueden formar con las letras de la palabra "MATEMÁTICA"?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>La palabra "MATEMÁTICA" tiene 10 letras:</p>
+                        <ul>
+                            <li>M aparece 2 veces</li>
+                            <li>A aparece 3 veces</li>
+                            <li>T aparece 2 veces</li>
+                            <li>E aparece 1 vez</li>
+                            <li>I aparece 1 vez</li>
+                            <li>C aparece 1 vez</li>
+                        </ul>
+                        <p>Aplicando la fórmula de permutaciones con repetición:</p>
+                        <p>\[PR(10; 2, 3, 2, 1, 1, 1) = \frac{10!}{2! \times 3! \times 2! \times 1! \times 1! \times 1!} = \frac{10!}{2! \times 3! \times 2!} = \frac{3,628,800}{2 \times 6 \times 2} = \frac{3,628,800}{24} = 151,200\]</p>
+                        <p>Se pueden formar 151,200 palabras diferentes.</p>
+                    </div>
+                    
+                    <h4>Ejemplo 2:</h4>
+                    <p>¿De cuántas formas diferentes se pueden ordenar las letras de la palabra "MISSISSIPPI"?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>La palabra "MISSISSIPPI" tiene 11 letras:</p>
+                        <ul>
+                            <li>M aparece 1 vez</li>
+                            <li>I aparece 4 veces</li>
+                            <li>S aparece 4 veces</li>
+                            <li>P aparece 2 veces</li>
+                        </ul>
+                        <p>Aplicando la fórmula de permutaciones con repetición:</p>
+                        <p>\[PR(11; 1, 4, 4, 2) = \frac{11!}{1! \times 4! \times 4! \times 2!} = \frac{39,916,800}{1 \times 24 \times 24 \times 2} = \frac{39,916,800}{1,152} = 34,650\]</p>
+                        <p>Se pueden formar 34,650 ordenamientos diferentes.</p>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo2" data-section-id="seccion3">Marcar como completado</button>
+            </section>
+
+            <section id="seccion4" class="module-section" style="display: none;">
+                <h3>2.4 Ejercicios Prácticos</h3>
+                <div class="module-content">
+                    <p>A continuación, se presentan algunos ejercicios para practicar los conceptos de permutaciones aprendidos en este módulo.</p>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 1</h4>
+                        <p>¿De cuántas formas diferentes se pueden ordenar 7 personas en una fila?</p>
+                        
+                        <form data-exercise-id="exercise1-mod2">
+                            <label for="ex1-mod2-answer">Tu respuesta:</label>
+                            <input type="number" id="ex1-mod2-answer" name="q1" min="1" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 2</h4>
+                        <p>En un concurso de talentos con 10 participantes, ¿de cuántas formas diferentes se pueden asignar el primer, segundo y tercer lugar?</p>
+                        
+                        <form data-exercise-id="exercise2-mod2">
+                            <label for="ex2-mod2-answer">Tu respuesta:</label>
+                            <input type="number" id="ex2-mod2-answer" name="q1" min="1" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 3</h4>
+                        <p>¿Cuántas palabras diferentes (con o sin sentido) se pueden formar con las letras de la palabra "COMBINATORIA"?</p>
+                        
+                        <form data-exercise-id="exercise3-mod2">
+                            <label for="ex3-mod2-answer">Tu respuesta:</label>
+                            <input type="number" id="ex3-mod2-answer" name="q1" min="1" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 4</h4>
+                        <p>¿De cuántas formas diferentes se pueden ordenar 4 libros de matemáticas y 3 libros de física en un estante, si los libros de cada materia deben estar juntos?</p>
+                        
+                        <form data-exercise-id="exercise4-mod2">
+                            <label for="ex4-mod2-answer">Tu respuesta:</label>
+                            <input type="number" id="ex4-mod2-answer" name="q1" min="1" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo2" data-section-id="seccion4">Marcar como completado</button>
+            </section>
+
+            <section id="seccion5" class="module-section" style="display: none;">
+                <h3>2.5 Evaluación del Módulo</h3>
+                <div class="module-content">
+                    <p>Completa la siguiente evaluación para verificar tu comprensión de los conceptos de permutaciones presentados en este módulo.</p>
+                    
+                    <div class="quiz">
+                        <h4>Evaluación del Módulo 2</h4>
+                        
+                        <form data-exercise-id="quiz2">
+                            <div class="question">
+                                <p><strong>1. ¿Cuál es el número de permutaciones de 6 elementos tomados de 3 en 3?</strong></p>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="q1" value="a"> a) 120
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q1" value="b"> b) 20
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q1" value="c"> c) 720
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q1" value="d"> d) 216
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>2. ¿Cuántas palabras diferentes se pueden formar con las letras de la palabra "BANANA"?</strong></p>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="q2" value="a"> a) 720
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q2" value="b"> b) 60
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q2" value="c"> c) 30
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q2" value="d"> d) 120
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>3. En una carrera con 12 corredores, ¿de cuántas formas diferentes se pueden asignar el oro, la plata y el bronce?</strong></p>
+                                <input type="number" name="q3" min="1" required>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>4. ¿Cuál de las siguientes afirmaciones es correcta sobre las permutaciones?</strong></p>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="q4" value="a"> a) En las permutaciones, el orden de los elementos no importa
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q4" value="b"> b) El número de permutaciones de n elementos tomados de n en n es n!
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q4" value="c"> c) Las permutaciones con repetición siempre generan más posibilidades que las permutaciones sin repetición
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q4" value="d"> d) El número de permutaciones de n elementos tomados de r en r es igual a la combinación de n elementos tomados de r en r
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>5. ¿Cuántas palabras diferentes se pueden formar con las letras de la palabra "ESTADÍSTICA"?</strong></p>
+                                <input type="number" name="q5" min="1" required>
+                            </div>
+                            
+                            <button type="submit" class="btn">Enviar Evaluación</button>
+                        </form>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo2" data-section-id="seccion5">Marcar como completado</button>
+            </section>
+
+            <section class="module-nav">
+                <a href="modulo1.html" class="btn">Módulo Anterior: Principios Básicos de Conteo</a>
+                <a href="modulo3.html" class="btn">Siguiente Módulo: Combinaciones</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Curso de Combinatoria - Cuadernillo Interactivo</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

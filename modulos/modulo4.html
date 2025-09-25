@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 4: Aplicaciones de la Combinatoria - Curso de Combinatoria</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Curso de Combinatoria</h1>
+            <p>Módulo 4: Aplicaciones de la Combinatoria</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="modulo1.html">Módulo 1</a></li>
+                <li><a href="modulo2.html">Módulo 2</a></li>
+                <li><a href="modulo3.html">Módulo 3</a></li>
+                <li><a href="modulo4.html" class="active">Módulo 4</a></li>
+                <li><a href="../recursos/evaluaciones/evaluacion_final.html">Evaluación Final</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section class="module-header">
+                <h2>Aplicaciones de la Combinatoria</h2>
+                <div class="progress-container">
+                    <div class="progress-bar" data-module-id="modulo4" style="width: 0%;"></div>
+                </div>
+                <p class="progress-indicator" data-module-id="modulo4">0% completado</p>
+            </section>
+
+            <section class="section-nav">
+                <h3>Contenido del Módulo</h3>
+                <ul>
+                    <li><a href="#seccion1" class="active">4.1 Aplicaciones en Probabilidad</a></li>
+                    <li><a href="#seccion2">4.2 Aplicaciones en Estadística</a></li>
+                    <li><a href="#seccion3">4.3 Aplicaciones en Informática</a></li>
+                    <li><a href="#seccion4">4.4 Ejercicios Prácticos</a></li>
+                    <li><a href="#seccion5">4.5 Evaluación del Módulo</a></li>
+                </ul>
+            </section>
+
+            <section id="seccion1" class="module-section">
+                <h3>4.1 Aplicaciones en Probabilidad</h3>
+                <div class="module-content">
+                    <p>La combinatoria es fundamental en el cálculo de probabilidades, especialmente cuando se trata de contar casos favorables y casos posibles en un espacio muestral.</p>
+                    
+                    <div class="definition">
+                        <h4>Probabilidad y Combinatoria</h4>
+                        <p>La probabilidad de un evento A se define como:</p>
+                        <p>\[P(A) = \frac{\text{Número de casos favorables}}{\text{Número de casos posibles}}\]</p>
+                        <p>La combinatoria nos ayuda a calcular estos números de forma eficiente.</p>
+                    </div>
+                    
+                    <h4>Ejemplo 1: Probabilidad en Cartas</h4>
+                    <p>¿Cuál es la probabilidad de obtener una mano de 5 cartas que contenga exactamente 2 ases de una baraja estándar de 52 cartas?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Para resolver este problema, necesitamos:</p>
+                        <ul>
+                            <li>Número de casos favorables: Manos con exactamente 2 ases</li>
+                            <li>Número de casos posibles: Todas las posibles manos de 5 cartas</li>
+                        </ul>
+                        
+                        <p>Casos posibles: \(C(52,5) = \binom{52}{5} = 2,598,960\)</p>
+                        
+                        <p>Casos favorables: Debemos seleccionar 2 ases de los 4 disponibles y 3 cartas que no sean ases de las 48 restantes:</p>
+                        <p>\(C(4,2) \times C(48,3) = \binom{4}{2} \times \binom{48}{3} = 6 \times 17,296 = 103,776\)</p>
+                        
+                        <p>Por lo tanto, la probabilidad es:</p>
+                        <p>\[P(\text{exactamente 2 ases}) = \frac{103,776}{2,598,960} = \frac{103,776}{2,598,960} \approx 0.0399 \approx 3.99\%\]</p>
+                    </div>
+                    
+                    <h4>Ejemplo 2: Probabilidad en Lotería</h4>
+                    <p>En una lotería, se seleccionan 6 números de un total de 49. ¿Cuál es la probabilidad de acertar exactamente 3 números?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Para resolver este problema, necesitamos:</p>
+                        <ul>
+                            <li>Número de casos favorables: Selecciones con exactamente 3 aciertos</li>
+                            <li>Número de casos posibles: Todas las posibles selecciones de 6 números</li>
+                        </ul>
+                        
+                        <p>Casos posibles: \(C(49,6) = \binom{49}{6} = 13,983,816\)</p>
+                        
+                        <p>Casos favorables: Debemos seleccionar 3 números de los 6 ganadores y 3 números de los 43 restantes:</p>
+                        <p>\(C(6,3) \times C(43,3) = \binom{6}{3} \times \binom{43}{3} = 20 \times 12,341 = 246,820\)</p>
+                        
+                        <p>Por lo tanto, la probabilidad es:</p>
+                        <p>\[P(\text{exactamente 3 aciertos}) = \frac{246,820}{13,983,816} \approx 0.0176 \approx 1.76\%\]</p>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo4" data-section-id="seccion1">Marcar como completado</button>
+            </section>
+
+            <section id="seccion2" class="module-section" style="display: none;">
+                <h3>4.2 Aplicaciones en Estadística</h3>
+                <div class="module-content">
+                    <p>La combinatoria es esencial en estadística, especialmente en el muestreo, análisis de datos y diseño experimental.</p>
+                    
+                    <h4>Muestreo Estadístico</h4>
+                    <p>Cuando se realiza un muestreo de una población, la combinatoria ayuda a determinar:</p>
+                    <ul>
+                        <li>El número de muestras posibles de un tamaño determinado</li>
+                        <li>La probabilidad de obtener muestras con ciertas características</li>
+                        <li>La representatividad de las muestras</li>
+                    </ul>
+                    
+                    <div class="example">
+                        <h4>Ejemplo: Muestreo Aleatorio Simple</h4>
+                        <p>En una población de 100 personas, ¿de cuántas formas se puede seleccionar una muestra aleatoria de 10 personas?</p>
+                        <p>Solución: Esto es una combinación de 100 elementos tomados de 10 en 10:</p>
+                        <p>\[C(100,10) = \binom{100}{10} = \frac{100!}{10!(100-10)!} = \frac{100!}{10!90!} \approx 1.73 \times 10^{13}\]</p>
+                        <p>Hay aproximadamente 17.3 billones de muestras posibles.</p>
+                    </div>
+                    
+                    <h4>Distribuciones Estadísticas</h4>
+                    <p>Muchas distribuciones estadísticas se basan en principios combinatorios:</p>
+                    
+                    <div class="definition">
+                        <h4>Distribución Binomial</h4>
+                        <p>La probabilidad de obtener exactamente \(k\) éxitos en \(n\) ensayos independientes con probabilidad de éxito \(p\) es:</p>
+                        <p>\[P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}\]</p>
+                        <p>Donde \(\binom{n}{k}\) es el coeficiente binomial que representa el número de formas de seleccionar \(k\) éxitos de \(n\) ensayos.</p>
+                    </div>
+                    
+                    <div class="example">
+                        <h4>Ejemplo: Distribución Binomial</h4>
+                        <p>Si la probabilidad de que un estudiante apruebe un examen es 0.7, ¿cuál es la probabilidad de que exactamente 8 de 10 estudiantes aprueben?</p>
+                        <p>Solución: Usando la distribución binomial con \(n = 10\), \(k = 8\) y \(p = 0.7\):</p>
+                        <p>\[P(X = 8) = \binom{10}{8} (0.7)^8 (0.3)^2 = 45 \times 0.7^8 \times 0.3^2 \approx 45 \times 0.0576 \times 0.09 \approx 0.2335\]</p>
+                        <p>La probabilidad es aproximadamente 0.2335 o 23.35%.</p>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo4" data-section-id="seccion2">Marcar como completado</button>
+            </section>
+
+            <section id="seccion3" class="module-section" style="display: none;">
+                <h3>4.3 Aplicaciones en Informática</h3>
+                <div class="module-content">
+                    <p>La combinatoria tiene numerosas aplicaciones en informática y ciencias de la computación.</p>
+                    
+                    <h4>Análisis de Algoritmos</h4>
+                    <p>La combinatoria es fundamental para:</p>
+                    <ul>
+                        <li>Analizar la complejidad de algoritmos</li>
+                        <li>Determinar el número de operaciones en un algoritmo</li>
+                        <li>Optimizar algoritmos de búsqueda y ordenamiento</li>
+                    </ul>
+                    
+                    <h4>Criptografía</h4>
+                    <p>La seguridad de muchos sistemas criptográficos se basa en principios combinatorios:</p>
+                    <ul>
+                        <li>Número de posibles claves en un sistema de cifrado</li>
+                        <li>Resistencia a ataques de fuerza bruta</li>
+                        <li>Generación de números pseudoaleatorios</li>
+                    </ul>
+                    
+                    <div class="example">
+                        <h4>Ejemplo: Seguridad de Contraseñas</h4>
+                        <p>¿Cuántas contraseñas posibles de 8 caracteres se pueden formar si se permiten letras mayúsculas, minúsculas y dígitos?</p>
+                        <p>Solución: Tenemos 26 letras mayúsculas, 26 letras minúsculas y 10 dígitos, para un total de 62 caracteres posibles.</p>
+                        <p>Como cada posición puede ser ocupada por cualquiera de los 62 caracteres y hay 8 posiciones, el número total de contraseñas posibles es:</p>
+                        <p>\[62^8 = 218,340,105,584,896 \approx 2.18 \times 10^{14}\]</p>
+                        <p>Hay aproximadamente 218 billones de contraseñas posibles.</p>
+                    </div>
+                    
+                    <h4>Teoría de Grafos</h4>
+                    <p>La combinatoria es esencial en la teoría de grafos, que tiene numerosas aplicaciones en informática:</p>
+                    <ul>
+                        <li>Redes de computadoras</li>
+                        <li>Algoritmos de enrutamiento</li>
+                        <li>Optimización de recursos</li>
+                        <li>Análisis de redes sociales</li>
+                    </ul>
+                    
+                    <div class="example">
+                        <h4>Ejemplo: Número de Árboles Abarcadores</h4>
+                        <p>En un grafo completo con \(n\) vértices, ¿cuántos árboles abarcadores diferentes existen?</p>
+                        <p>Solución: Según el teorema de Cayley, el número de árboles abarcadores en un grafo completo con \(n\) vértices es \(n^{n-2}\).</p>
+                        <p>Para un grafo completo con 5 vértices, el número de árboles abarcadores es:</p>
+                        <p>\[5^{5-2} = 5^3 = 125\]</p>
+                        <p>Hay 125 árboles abarcadores diferentes.</p>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo4" data-section-id="seccion3">Marcar como completado</button>
+            </section>
+
+            <section id="seccion4" class="module-section" style="display: none;">
+                <h3>4.4 Ejercicios Prácticos</h3>
+                <div class="module-content">
+                    <p>A continuación, se presentan algunos ejercicios para practicar las aplicaciones de la combinatoria.</p>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 1</h4>
+                        <p>En una clase de 25 estudiantes, ¿cuál es la probabilidad de que al menos 2 estudiantes cumplan años el mismo día? (Suponga que hay 365 días en un año y que los cumpleaños se distribuyen uniformemente).</p>
+                        
+                        <form data-exercise-id="exercise1-mod4">
+                            <label for="ex1-mod4-answer">Tu respuesta (en porcentaje, sin el símbolo %):</label>
+                            <input type="number" id="ex1-mod4-answer" name="q1" min="0" max="100" step="0.01" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 2</h4>
+                        <p>En un juego de lotería, se seleccionan 5 números de un total de 35. ¿Cuál es la probabilidad de acertar exactamente 3 números?</p>
+                        
+                        <form data-exercise-id="exercise2-mod4">
+                            <label for="ex2-mod4-answer">Tu respuesta (en porcentaje, sin el símbolo %):</label>
+                            <input type="number" id="ex2-mod4-answer" name="q1" min="0" max="100" step="0.01" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 3</h4>
+                        <p>¿Cuántas contraseñas diferentes de 6 caracteres se pueden formar si los caracteres deben ser letras minúsculas y debe haber al menos una vocal?</p>
+                        
+                        <form data-exercise-id="exercise3-mod4">
+                            <label for="ex3-mod4-answer">Tu respuesta:</label>
+                            <input type="number" id="ex3-mod4-answer" name="q1" min="1" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 4</h4>
+                        <p>En un experimento binomial con 12 ensayos y probabilidad de éxito 0.4, ¿cuál es la probabilidad de obtener exactamente 5 éxitos?</p>
+                        
+                        <form data-exercise-id="exercise4-mod4">
+                            <label for="ex4-mod4-answer">Tu respuesta (en porcentaje, sin el símbolo %):</label>
+                            <input type="number" id="ex4-mod4-answer" name="q1" min="0" max="100" step="0.01" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo4" data-section-id="seccion4">Marcar como completado</button>
+            </section>
+
+            <section id="seccion5" class="module-section" style="display: none;">
+                <h3>4.5 Evaluación del Módulo</h3>
+                <div class="module-content">
+                    <p>Completa la siguiente evaluación para verificar tu comprensión de las aplicaciones de la combinatoria presentadas en este módulo.</p>
+                    
+                    <div class="quiz">
+                        <h4>Evaluación del Módulo 4</h4>
+                        
+                        <form data-exercise-id="quiz4">
+                            <div class="question">
+                                <p><strong>1. En una baraja de 52 cartas, ¿cuál es la probabilidad de obtener una mano de 5 cartas que contenga exactamente un as?</strong></p>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="q1" value="a"> a) 0.299 (29.9%)
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q1" value="b"> b) 0.422 (42.2%)
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q1" value="c"> c) 0.149 (14.9%)
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q1" value="d"> d) 0.033 (3.3%)
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>2. En un experimento binomial con 15 ensayos y probabilidad de éxito 0.3, ¿cuál es la probabilidad de obtener exactamente 6 éxitos?</strong></p>
+                                <input type="number" name="q2" min="0" max="1" step="0.0001" required>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>3. ¿Cuántas contraseñas diferentes de 4 dígitos se pueden formar si no se permite repetir dígitos?</strong></p>
+                                <input type="number" name="q3" min="1" required>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>4. En un grupo de 30 personas, ¿cuál es la probabilidad de que al menos dos personas cumplan años el mismo día? (Suponga que hay 365 días en un año y que los cumpleaños se distribuyen uniformemente).</strong></p>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="q4" value="a"> a) Aproximadamente 0.294 (29.4%)
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q4" value="b"> b) Aproximadamente 0.706 (70.6%)
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q4" value="c"> c) Aproximadamente 0.5 (50%)
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q4" value="d"> d) Aproximadamente 0.9 (90%)
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>5. ¿Cuál de las siguientes NO es una aplicación común de la combinatoria en informática?</strong></p>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="q5" value="a"> a) Análisis de algoritmos
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q5" value="b"> b) Criptografía
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q5" value="c"> c) Teoría de grafos
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q5" value="d"> d) Programación orientada a objetos
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn">Enviar Evaluación</button>
+                        </form>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo4" data-section-id="seccion5">Marcar como completado</button>
+            </section>
+
+            <section class="module-nav">
+                <a href="modulo3.html" class="btn">Módulo Anterior: Combinaciones</a>
+                <a href="../recursos/evaluaciones/evaluacion_final.html" class="btn">Evaluación Final</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Curso de Combinatoria - Cuadernillo Interactivo</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

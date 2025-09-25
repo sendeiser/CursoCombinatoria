@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 3: Combinaciones - Curso de Combinatoria</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Curso de Combinatoria</h1>
+            <p>Módulo 3: Combinaciones</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="modulo1.html">Módulo 1</a></li>
+                <li><a href="modulo2.html">Módulo 2</a></li>
+                <li><a href="modulo3.html" class="active">Módulo 3</a></li>
+                <li><a href="modulo4.html">Módulo 4</a></li>
+                <li><a href="../recursos/evaluaciones/evaluacion_final.html">Evaluación Final</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section class="module-header">
+                <h2>Combinaciones</h2>
+                <div class="progress-container">
+                    <div class="progress-bar" data-module-id="modulo3" style="width: 0%;"></div>
+                </div>
+                <p class="progress-indicator" data-module-id="modulo3">0% completado</p>
+            </section>
+
+            <section class="section-nav">
+                <h3>Contenido del Módulo</h3>
+                <ul>
+                    <li><a href="#seccion1" class="active">3.1 Concepto de Combinación</a></li>
+                    <li><a href="#seccion2">3.2 Combinaciones sin Repetición</a></li>
+                    <li><a href="#seccion3">3.3 Combinaciones con Repetición</a></li>
+                    <li><a href="#seccion4">3.4 Ejercicios Prácticos</a></li>
+                    <li><a href="#seccion5">3.5 Evaluación del Módulo</a></li>
+                </ul>
+            </section>
+
+            <section id="seccion1" class="module-section">
+                <h3>3.1 Concepto de Combinación</h3>
+                <div class="module-content">
+                    <p>Una combinación es una selección de elementos donde el orden no importa. A diferencia de las permutaciones, en las combinaciones solo nos interesa qué elementos se seleccionan, no cómo están ordenados.</p>
+                    
+                    <div class="definition">
+                        <h4>Definición: Combinación</h4>
+                        <p>Una combinación de \(n\) elementos tomados de \(r\) en \(r\) (donde \(r \leq n\)) es una selección de \(r\) elementos del conjunto total de \(n\) elementos, sin importar el orden.</p>
+                    </div>
+                    
+                    <p>Por ejemplo, si tenemos el conjunto {A, B, C, D} y queremos seleccionar 2 elementos, las posibles combinaciones son:</p>
+                    <ul>
+                        <li>{A, B}</li>
+                        <li>{A, C}</li>
+                        <li>{A, D}</li>
+                        <li>{B, C}</li>
+                        <li>{B, D}</li>
+                        <li>{C, D}</li>
+                    </ul>
+                    
+                    <p>Observamos que hay 6 combinaciones posibles de 4 elementos tomados de 2 en 2.</p>
+                    
+                    <h4>Diferencia entre Permutación y Combinación</h4>
+                    <p>La principal diferencia entre permutaciones y combinaciones es:</p>
+                    <ul>
+                        <li><strong>Permutación:</strong> El orden importa. Por ejemplo, ABC y CBA son permutaciones diferentes.</li>
+                        <li><strong>Combinación:</strong> El orden no importa. Por ejemplo, {A, B, C} y {C, B, A} son la misma combinación.</li>
+                    </ul>
+                    
+                    <h4>Aplicaciones de las Combinaciones</h4>
+                    <p>Las combinaciones tienen numerosas aplicaciones en diversos campos:</p>
+                    <ul>
+                        <li><strong>Probabilidad:</strong> Cálculo de probabilidades en juegos de azar, loterías.</li>
+                        <li><strong>Estadística:</strong> Muestreo y análisis combinatorio.</li>
+                        <li><strong>Teoría de conjuntos:</strong> Estudio de subconjuntos.</li>
+                        <li><strong>Optimización:</strong> Selección de elementos óptimos.</li>
+                        <li><strong>Genética:</strong> Estudio de combinaciones genéticas.</li>
+                    </ul>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo3" data-section-id="seccion1">Marcar como completado</button>
+            </section>
+
+            <section id="seccion2" class="module-section" style="display: none;">
+                <h3>3.2 Combinaciones sin Repetición</h3>
+                <div class="module-content">
+                    <p>Las combinaciones sin repetición se refieren a las diferentes selecciones que podemos formar con elementos donde cada elemento se utiliza a lo sumo una vez.</p>
+                    
+                    <div class="definition">
+                        <h4>Definición: Combinaciones sin Repetición</h4>
+                        <p>El número de combinaciones de \(n\) elementos distintos tomados de \(r\) en \(r\) (donde \(r \leq n\)) se denota como \(C(n,r)\), \(C_r^n\) o \(\binom{n}{r}\) (coeficiente binomial) y se calcula mediante la fórmula:</p>
+                        <p>\[C(n,r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}\]</p>
+                    </div>
+                    
+                    <h4>Propiedades de los Coeficientes Binomiales</h4>
+                    <p>Los coeficientes binomiales tienen varias propiedades interesantes:</p>
+                    <ul>
+                        <li>\(\binom{n}{0} = \binom{n}{n} = 1\)</li>
+                        <li>\(\binom{n}{r} = \binom{n}{n-r}\)</li>
+                        <li>\(\binom{n}{r} + \binom{n}{r-1} = \binom{n+1}{r}\)</li>
+                    </ul>
+                    
+                    <h4>Ejemplo 1:</h4>
+                    <p>¿De cuántas formas se puede seleccionar un comité de 3 personas de un grupo de 8 personas?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Esto es una combinación de 8 elementos tomados de 3 en 3, por lo que:</p>
+                        <p>\[C(8,3) = \binom{8}{3} = \frac{8!}{3!(8-3)!} = \frac{8!}{3!5!} = \frac{8 \times 7 \times 6 \times 5!}{3 \times 2 \times 1 \times 5!} = \frac{8 \times 7 \times 6}{3 \times 2 \times 1} = \frac{336}{6} = 56\]</p>
+                        <p>Hay 56 formas diferentes de seleccionar un comité de 3 personas de un grupo de 8 personas.</p>
+                    </div>
+                    
+                    <h4>Ejemplo 2:</h4>
+                    <p>En una clase de 20 estudiantes, ¿de cuántas formas se pueden elegir 2 representantes para el consejo estudiantil?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Esto es una combinación de 20 elementos tomados de 2 en 2, por lo que:</p>
+                        <p>\[C(20,2) = \binom{20}{2} = \frac{20!}{2!(20-2)!} = \frac{20!}{2!18!} = \frac{20 \times 19 \times 18!}{2 \times 1 \times 18!} = \frac{20 \times 19}{2 \times 1} = \frac{380}{2} = 190\]</p>
+                        <p>Hay 190 formas diferentes de elegir 2 representantes de una clase de 20 estudiantes.</p>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo3" data-section-id="seccion2">Marcar como completado</button>
+            </section>
+
+            <section id="seccion3" class="module-section" style="display: none;">
+                <h3>3.3 Combinaciones con Repetición</h3>
+                <div class="module-content">
+                    <p>Las combinaciones con repetición se refieren a las diferentes selecciones que podemos formar cuando los elementos pueden repetirse.</p>
+                    
+                    <div class="definition">
+                        <h4>Definición: Combinaciones con Repetición</h4>
+                        <p>El número de combinaciones con repetición de \(n\) elementos tomados de \(r\) en \(r\) se denota como \(CR(n,r)\) y se calcula mediante la fórmula:</p>
+                        <p>\[CR(n,r) = \binom{n+r-1}{r} = \frac{(n+r-1)!}{r!(n-1)!}\]</p>
+                    </div>
+                    
+                    <h4>Ejemplo 1:</h4>
+                    <p>Una heladería ofrece 5 sabores de helado. ¿De cuántas formas diferentes puede un cliente elegir 3 bolas de helado si puede repetir sabores?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Esto es una combinación con repetición de 5 elementos tomados de 3 en 3, por lo que:</p>
+                        <p>\[CR(5,3) = \binom{5+3-1}{3} = \binom{7}{3} = \frac{7!}{3!(7-3)!} = \frac{7!}{3!4!} = \frac{7 \times 6 \times 5 \times 4!}{3 \times 2 \times 1 \times 4!} = \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = \frac{210}{6} = 35\]</p>
+                        <p>Hay 35 formas diferentes de elegir 3 bolas de helado de 5 sabores disponibles, permitiendo repeticiones.</p>
+                    </div>
+                    
+                    <h4>Ejemplo 2:</h4>
+                    <p>¿De cuántas formas se pueden distribuir 8 caramelos idénticos entre 4 niños, si cada niño puede recibir cualquier cantidad de caramelos (incluso ninguno)?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Este problema se puede reformular como: ¿De cuántas formas se pueden seleccionar con repetición 4 elementos (los niños) tomados de 8+4 = 12 en 8?</p>
+                        <p>Usando la fórmula de combinaciones con repetición:</p>
+                        <p>\[CR(4,8) = \binom{4+8-1}{8} = \binom{11}{8} = \binom{11}{3} = \frac{11!}{3!(11-3)!} = \frac{11!}{3!8!} = \frac{11 \times 10 \times 9 \times 8!}{3 \times 2 \times 1 \times 8!} = \frac{11 \times 10 \times 9}{3 \times 2 \times 1} = \frac{990}{6} = 165\]</p>
+                        <p>Hay 165 formas diferentes de distribuir 8 caramelos idénticos entre 4 niños.</p>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo3" data-section-id="seccion3">Marcar como completado</button>
+            </section>
+
+            <section id="seccion4" class="module-section" style="display: none;">
+                <h3>3.4 Ejercicios Prácticos</h3>
+                <div class="module-content">
+                    <p>A continuación, se presentan algunos ejercicios para practicar los conceptos de combinaciones aprendidos en este módulo.</p>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 1</h4>
+                        <p>¿De cuántas formas se pueden elegir 4 cartas de una baraja estándar de 52 cartas?</p>
+                        
+                        <form data-exercise-id="exercise1-mod3">
+                            <label for="ex1-mod3-answer">Tu respuesta:</label>
+                            <input type="number" id="ex1-mod3-answer" name="q1" min="1" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 2</h4>
+                        <p>En un grupo de 15 personas, ¿de cuántas formas se puede seleccionar un comité de 5 personas?</p>
+                        
+                        <form data-exercise-id="exercise2-mod3">
+                            <label for="ex2-mod3-answer">Tu respuesta:</label>
+                            <input type="number" id="ex2-mod3-answer" name="q1" min="1" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 3</h4>
+                        <p>¿De cuántas formas se pueden seleccionar 3 sabores de helado de 7 sabores disponibles, si se permite repetir sabores?</p>
+                        
+                        <form data-exercise-id="exercise3-mod3">
+                            <label for="ex3-mod3-answer">Tu respuesta:</label>
+                            <input type="number" id="ex3-mod3-answer" name="q1" min="1" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                    
+                    <div class="exercise">
+                        <h4>Ejercicio 4</h4>
+                        <p>¿De cuántas formas se pueden distribuir 10 caramelos idénticos entre 3 niños, si cada niño debe recibir al menos un caramelo?</p>
+                        
+                        <form data-exercise-id="exercise4-mod3">
+                            <label for="ex4-mod3-answer">Tu respuesta:</label>
+                            <input type="number" id="ex4-mod3-answer" name="q1" min="1" required>
+                            <button type="submit" class="btn">Verificar</button>
+                        </form>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo3" data-section-id="seccion4">Marcar como completado</button>
+            </section>
+
+            <section id="seccion5" class="module-section" style="display: none;">
+                <h3>3.5 Evaluación del Módulo</h3>
+                <div class="module-content">
+                    <p>Completa la siguiente evaluación para verificar tu comprensión de los conceptos de combinaciones presentados en este módulo.</p>
+                    
+                    <div class="quiz">
+                        <h4>Evaluación del Módulo 3</h4>
+                        
+                        <form data-exercise-id="quiz3">
+                            <div class="question">
+                                <p><strong>1. ¿Cuál es el número de combinaciones de 9 elementos tomados de 4 en 4?</strong></p>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="q1" value="a"> a) 126
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q1" value="b"> b) 3,024
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q1" value="c"> c) 15,120
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q1" value="d"> d) 9,072
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>2. ¿Cuántas combinaciones con repetición de 4 elementos tomados de 3 en 3 hay?</strong></p>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="q2" value="a"> a) 4
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q2" value="b"> b) 20
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q2" value="c"> c) 24
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q2" value="d"> d) 64
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>3. En un equipo de fútbol de 22 jugadores, ¿de cuántas formas se puede elegir a los 11 jugadores titulares?</strong></p>
+                                <input type="number" name="q3" min="1" required>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>4. ¿Cuál de las siguientes afirmaciones es correcta sobre las combinaciones?</strong></p>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="q4" value="a"> a) En las combinaciones, el orden de los elementos importa
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q4" value="b"> b) El número de combinaciones de n elementos tomados de r en r es igual a la permutación de n elementos tomados de r en r
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q4" value="c"> c) C(n,r) = C(n,n-r)
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="q4" value="d"> d) Las combinaciones con repetición siempre generan menos posibilidades que las combinaciones sin repetición
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <p><strong>5. ¿De cuántas formas se pueden distribuir 12 caramelos idénticos entre 5 niños, si cada niño debe recibir al menos un caramelo?</strong></p>
+                                <input type="number" name="q5" min="1" required>
+                            </div>
+                            
+                            <button type="submit" class="btn">Enviar Evaluación</button>
+                        </form>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo3" data-section-id="seccion5">Marcar como completado</button>
+            </section>
+
+            <section class="module-nav">
+                <a href="modulo2.html" class="btn">Módulo Anterior: Permutaciones</a>
+                <a href="modulo4.html" class="btn">Siguiente Módulo: Aplicaciones de la Combinatoria</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Curso de Combinatoria - Cuadernillo Interactivo</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

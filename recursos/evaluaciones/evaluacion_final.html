@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Final - Curso de Combinatoria</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Curso de Combinatoria</h1>
+            <p>Evaluación Final</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../../modulos/modulo1.html">Módulo 1</a></li>
+                <li><a href="../../modulos/modulo2.html">Módulo 2</a></li>
+                <li><a href="../../modulos/modulo3.html">Módulo 3</a></li>
+                <li><a href="../../modulos/modulo4.html">Módulo 4</a></li>
+                <li><a href="evaluacion_final.html" class="active">Evaluación Final</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section class="module-header">
+                <h2>Evaluación Final del Curso</h2>
+                <p>Esta evaluación abarca todos los temas estudiados en los cuatro módulos del curso. Responde cuidadosamente a cada pregunta para demostrar tu comprensión de los conceptos de combinatoria.</p>
+            </section>
+
+            <section class="module-content">
+                <div class="quiz final-exam">
+                    <form id="final-exam">
+                        <div class="question">
+                            <p><strong>1. En una reunión hay 12 personas. ¿De cuántas formas pueden sentarse alrededor de una mesa circular?</strong></p>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="q1" value="a"> a) 12!
+                                </label>
+                                <label>
+                                    <input type="radio" name="q1" value="b"> b) 11!
+                                </label>
+                                <label>
+                                    <input type="radio" name="q1" value="c"> c) P(12,12)
+                                </label>
+                                <label>
+                                    <input type="radio" name="q1" value="d"> d) C(12,12)
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="question">
+                            <p><strong>2. ¿Cuántas palabras diferentes (con o sin sentido) se pueden formar con todas las letras de la palabra "MATEMATICA"?</strong></p>
+                            <input type="number" name="q2" min="1" required>
+                        </div>
+                        
+                        <div class="question">
+                            <p><strong>3. En un grupo de 8 personas, ¿de cuántas formas se puede seleccionar un comité de 3 personas?</strong></p>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="q3" value="a"> a) P(8,3)
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="b"> b) C(8,3)
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="c"> c) 8³
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="d"> d) 3⁸
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="question">
+                            <p><strong>4. ¿Cuántos números de 4 dígitos se pueden formar con los dígitos 1, 2, 3, 4, 5, 6 si no se permite repetir dígitos?</strong></p>
+                            <input type="number" name="q4" min="1" required>
+                        </div>
+                        
+                        <div class="question">
+                            <p><strong>5. ¿Cuál es el coeficiente de x³y² en la expansión de (x + y)⁵?</strong></p>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="q5" value="a"> a) 5
+                                </label>
+                                <label>
+                                    <input type="radio" name="q5" value="b"> b) 10
+                                </label>
+                                <label>
+                                    <input type="radio" name="q5" value="c"> c) 20
+                                </label>
+                                <label>
+                                    <input type="radio" name="q5" value="d"> d) 30
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="question">
+                            <p><strong>6. En una baraja de 52 cartas, ¿cuál es la probabilidad de obtener una mano de 5 cartas que contenga exactamente 3 ases?</strong></p>
+                            <input type="number" name="q6" min="0" max="1" step="0.0001" required>
+                        </div>
+                        
+                        <div class="question">
+                            <p><strong>7. ¿Cuántas diagonales tiene un polígono de 10 lados?</strong></p>
+                            <input type="number" name="q7" min="1" required>
+                        </div>
+                        
+                        <div class="question">
+                            <p><strong>8. Si se lanzan 2 dados, ¿cuál es la probabilidad de que la suma sea 7?</strong></p>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="q8" value="a"> a) 1/6
+                                </label>
+                                <label>
+                                    <input type="radio" name="q8" value="b"> b) 1/12
+                                </label>
+                                <label>
+                                    <input type="radio" name="q8" value="c"> c) 1/9
+                                </label>
+                                <label>
+                                    <input type="radio" name="q8" value="d"> d) 1/36
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="question">
+                            <p><strong>9. ¿Cuántas formas hay de distribuir 10 objetos distintos en 3 cajas distintas, si cada caja debe contener al menos un objeto?</strong></p>
+                            <input type="number" name="q9" min="1" required>
+                        </div>
+                        
+                        <div class="question">
+                            <p><strong>10. En un experimento binomial con 20 ensayos y probabilidad de éxito 0.25, ¿cuál es la probabilidad de obtener exactamente 5 éxitos?</strong></p>
+                            <input type="number" name="q10" min="0" max="1" step="0.0001" required>
+                        </div>
+                        
+                        <div class="question">
+                            <p><strong>11. ¿Cuántas soluciones enteras no negativas tiene la ecuación x + y + z = 15?</strong></p>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="q11" value="a"> a) C(15,2)
+                                </label>
+                                <label>
+                                    <input type="radio" name="q11" value="b"> b) C(17,2)
+                                </label>
+                                <label>
+                                    <input type="radio" name="q11" value="c"> c) C(15,3)
+                                </label>
+                                <label>
+                                    <input type="radio" name="q11" value="d"> d) C(17,3)
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="question">
+                            <p><strong>12. ¿Cuántos números de 5 dígitos se pueden formar con los dígitos 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 si el número debe ser par y no se permiten repeticiones?</strong></p>
+                            <input type="number" name="q12" min="1" required>
+                        </div>
+                        
+                        <div class="question">
+                            <p><strong>13. ¿Cuál de los siguientes principios se utiliza para contar el número de formas de realizar una tarea que puede hacerse de varias maneras diferentes?</strong></p>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="q13" value="a"> a) Principio multiplicativo
+                                </label>
+                                <label>
+                                    <input type="radio" name="q13" value="b"> b) Principio aditivo
+                                </label>
+                                <label>
+                                    <input type="radio" name="q13" value="c"> a) y b) son correctas
+                                </label>
+                                <label>
+                                    <input type="radio" name="q13" value="d"> d) Ninguna de las anteriores
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="question">
+                            <p><strong>14. ¿Cuántas permutaciones de las letras de la palabra "COMBINATORIA" tienen las vocales en posiciones pares?</strong></p>
+                            <input type="number" name="q14" min="1" required>
+                        </div>
+                        
+                        <div class="question">
+                            <p><strong>15. En un grupo de 50 estudiantes, 30 estudian matemáticas, 25 estudian física y 10 estudian ambas materias. ¿Cuántos estudiantes no estudian ninguna de las dos materias?</strong></p>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="q15" value="a"> a) 5
+                                </label>
+                                <label>
+                                    <input type="radio" name="q15" value="b"> b) 10
+                                </label>
+                                <label>
+                                    <input type="radio" name="q15" value="c"> c) 15
+                                </label>
+                                <label>
+                                    <input type="radio" name="q15" value="d"> d) 20
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn">Enviar Evaluación</button>
+                    </form>
+                </div>
+                
+                <div id="results" style="display: none;">
+                    <h3>Resultados de la Evaluación Final</h3>
+                    <p>Has completado <span id="correct-answers">0</span> de 15 preguntas correctamente.</p>
+                    <p>Tu calificación es: <span id="final-score">0</span>%</p>
+                    <div id="feedback"></div>
+                    <button id="retry-exam" class="btn">Intentar de nuevo</button>
+                    <a href="../../index.html" class="btn">Volver al Inicio</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Curso de Combinatoria - Cuadernillo Interactivo</p>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script>
+        // Respuestas correctas para la evaluación final
+        const finalExamAnswers = {
+            q1: 'b',  // 11!
+            q2: 151200,  // 10! / (2! * 3!)
+            q3: 'b',  // C(8,3)
+            q4: 360,  // P(6,4)
+            q5: 'b',  // 10
+            q6: 0.0018,  // (C(4,3) * C(48,2)) / C(52,5)
+            q7: 35,  // n(n-3)/2 donde n=10
+            q8: 'a',  // 6/36 = 1/6
+            q9: 9330,  // 3^10 - 3*2^10 + 3
+            q10: 0.2023,  // C(20,5) * 0.25^5 * 0.75^15
+            q11: 'd',  // C(17,3)
+            q12: 4320,  // 5 * 9 * 8 * 7 * 6
+            q13: 'c',  // Ambos principios
+            q14: 86400,  // Cálculo complejo
+            q15: 'a'   // 5
+        };
+        
+        // Configuración de la evaluación final
+        document.addEventListener('DOMContentLoaded', function() {
+            const finalExamForm = document.getElementById('final-exam');
+            const resultsDiv = document.getElementById('results');
+            const correctAnswersSpan = document.getElementById('correct-answers');
+            const finalScoreSpan = document.getElementById('final-score');
+            const feedbackDiv = document.getElementById('feedback');
+            const retryButton = document.getElementById('retry-exam');
+            
+            finalExamForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(finalExamForm);
+                let correctCount = 0;
+                let feedback = '';
+                
+                // Verificar respuestas
+                for (let i = 1; i <= 15; i++) {
+                    const questionKey = `q${i}`;
+                    const userAnswer = formData.get(questionKey);
+                    const correctAnswer = finalExamAnswers[questionKey];
+                    
+                    if (userAnswer === correctAnswer || 
+                        (typeof correctAnswer === 'number' && Math.abs(parseFloat(userAnswer) - correctAnswer) < 0.001)) {
+                        correctCount++;
+                        feedback += `<p class="correct">Pregunta ${i}: ¡Correcto!</p>`;
+                    } else {
+                        feedback += `<p class="incorrect">Pregunta ${i}: Incorrecto. La respuesta correcta es ${correctAnswer}.</p>`;
+                    }
+                }
+                
+                // Mostrar resultados
+                const score = Math.round((correctCount / 15) * 100);
+                correctAnswersSpan.textContent = correctCount;
+                finalScoreSpan.textContent = score;
+                feedbackDiv.innerHTML = feedback;
+                
+                finalExamForm.style.display = 'none';
+                resultsDiv.style.display = 'block';
+                
+                // Guardar progreso
+                localStorage.setItem('finalExamCompleted', 'true');
+                localStorage.setItem('finalExamScore', score);
+                
+                // Actualizar progreso general del curso
+                updateCourseProgress();
+            });
+            
+            // Reintentar examen
+            retryButton.addEventListener('click', function() {
+                finalExamForm.reset();
+                finalExamForm.style.display = 'block';
+                resultsDiv.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
