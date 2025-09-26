@@ -170,50 +170,105 @@
             <section id="seccion4" class="module-section" style="display: none;">
                 <h3>3.4 Ejercicios Prácticos</h3>
                 <div class="module-content">
-                    <p>A continuación, se presentan algunos ejercicios para practicar los conceptos de combinaciones aprendidos en este módulo.</p>
+                    <p>Resuelve los siguientes ejercicios para aplicar lo aprendido sobre combinaciones.</p>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 1</h4>
-                        <p>¿De cuántas formas se pueden elegir 4 cartas de una baraja estándar de 52 cartas?</p>
-                        
-                        <form data-exercise-id="exercise1-mod3">
-                            <label for="ex1-mod3-answer">Tu respuesta:</label>
-                            <input type="number" id="ex1-mod3-answer" name="q1" min="1" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                    <div class="exercise" data-exercise-id="modulo3-ex1">
+                        <h4>Ejercicio 1: Selección de Libros</h4>
+                        <p>¿De cuántas formas se pueden elegir 3 libros de una colección de 8 libros diferentes?</p>
+                        <div class="input-group">
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="56">Verificar</button>
+                        </div>
+                        <div class="feedback"></div>
                     </div>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 2</h4>
-                        <p>En un grupo de 15 personas, ¿de cuántas formas se puede seleccionar un comité de 5 personas?</p>
-                        
-                        <form data-exercise-id="exercise2-mod3">
-                            <label for="ex2-mod3-answer">Tu respuesta:</label>
-                            <input type="number" id="ex2-mod3-answer" name="q1" min="1" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                    <div class="exercise" data-exercise-id="modulo3-ex2">
+                        <h4>Ejercicio 2: Formación de Comités</h4>
+                        <p>En un grupo de 12 estudiantes, ¿de cuántas formas se puede elegir un comité de 4 personas?</p>
+                        <div class="input-group">
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="495">Verificar</button>
+                        </div>
+                        <div class="feedback"></div>
                     </div>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 3</h4>
-                        <p>¿De cuántas formas se pueden seleccionar 3 sabores de helado de 7 sabores disponibles, si se permite repetir sabores?</p>
+                    <h4>Actividades Complementarias</h4>
+                    
+                    <div class="complementary-activity">
+                        <h5>Problema: Elecciones Complementarias</h5>
+                        <p>En un grupo de 10 estudiantes, se debe elegir un comité de 4 personas.</p>
                         
-                        <form data-exercise-id="exercise3-mod3">
-                            <label for="ex3-mod3-answer">Tu respuesta:</label>
-                            <input type="number" id="ex3-mod3-answer" name="q1" min="1" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                        <div class="interactive-exercise">
+                            <p>¿De cuántas formas se puede elegir este comité?</p>
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="210">Verificar</button>
+                            <div class="feedback"></div>
+                        </div>
+                        
+                        <div class="interactive-exercise">
+                            <p>Si elegimos 4 estudiantes para el comité, ¿cuántos estudiantes quedan fuera del comité?</p>
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="6">Verificar</button>
+                            <div class="feedback"></div>
+                        </div>
+                        
+                        <div class="interactive-exercise">
+                            <p>¿De cuántas formas se pueden elegir los 6 estudiantes que NO estarán en el comité?</p>
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="210">Verificar</button>
+                            <div class="feedback"></div>
+                            <div class="hint">
+                                <p>Observa que elegir 4 estudiantes para el comité automáticamente determina los 6 que no estarán. Por lo tanto, el número de formas de elegir quiénes NO estarán en el comité es igual al número de formas de elegir quiénes SÍ estarán.</p>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 4</h4>
-                        <p>¿De cuántas formas se pueden distribuir 10 caramelos idénticos entre 3 niños, si cada niño debe recibir al menos un caramelo?</p>
+                    <div class="complementary-activity">
+                        <h5>Problema: Helados Combinados</h5>
+                        <p>Una heladería ofrece 8 sabores diferentes de helado. Quieres comprar un helado de 2 sabores.</p>
                         
-                        <form data-exercise-id="exercise4-mod3">
-                            <label for="ex4-mod3-answer">Tu respuesta:</label>
-                            <input type="number" id="ex4-mod3-answer" name="q1" min="1" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                        <div class="interactive-exercise">
+                            <p>¿Cuántas combinaciones diferentes de 2 sabores puedes elegir?</p>
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="28">Verificar</button>
+                            <div class="feedback"></div>
+                        </div>
+                        
+                        <div class="interactive-exercise">
+                            <p>Si la heladería añade 2 sabores nuevos, ¿cuántas combinaciones diferentes de 2 sabores habría ahora?</p>
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="45">Verificar</button>
+                            <div class="feedback"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="complementary-activity">
+                        <h5>Actividad Artística: Outfits Complementarios</h5>
+                        <p>En esta actividad, crearás combinaciones de prendas para formar diferentes conjuntos de ropa.</p>
+                        
+                        <h6>Materiales:</h6>
+                        <ul>
+                            <li>Papel de colores</li>
+                            <li>Tijeras</li>
+                            <li>Pegamento</li>
+                            <li>Cartulina</li>
+                            <li>Marcadores</li>
+                        </ul>
+                        
+                        <h6>Instrucciones:</h6>
+                        <ol>
+                            <li>Dibuja y recorta 5 camisetas y 4 pantalones de diferentes colores o diseños.</li>
+                            <li>Calcula cuántas combinaciones diferentes de 1 camiseta y 1 pantalón puedes formar.</li>
+                            <li>Crea un "lookbook" pegando en la cartulina al menos 8 combinaciones diferentes.</li>
+                            <li>Para cada combinación, escribe una breve descripción de dónde se podría usar ese conjunto (por ejemplo, "para ir a la escuela", "para una fiesta", etc.).</li>
+                        </ol>
+                        
+                        <div class="interactive-exercise">
+                            <p>¿Cuántas combinaciones diferentes de 1 camiseta y 1 pantalón puedes formar con 5 camisetas y 4 pantalones?</p>
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="20">Verificar</button>
+                            <div class="feedback"></div>
+                        </div>
                     </div>
                 </div>
                 <button class="mark-complete btn" data-module-id="modulo3" data-section-id="seccion4">Marcar como completado</button>

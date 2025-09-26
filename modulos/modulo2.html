@@ -178,50 +178,99 @@
             <section id="seccion4" class="module-section" style="display: none;">
                 <h3>2.4 Ejercicios Prácticos</h3>
                 <div class="module-content">
-                    <p>A continuación, se presentan algunos ejercicios para practicar los conceptos de permutaciones aprendidos en este módulo.</p>
+                    <p>Resuelve los siguientes ejercicios para aplicar lo aprendido sobre permutaciones.</p>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 1</h4>
-                        <p>¿De cuántas formas diferentes se pueden ordenar 7 personas en una fila?</p>
-                        
-                        <form data-exercise-id="exercise1-mod2">
-                            <label for="ex1-mod2-answer">Tu respuesta:</label>
-                            <input type="number" id="ex1-mod2-answer" name="q1" min="1" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                    <div class="exercise" data-exercise-id="modulo2-ex1">
+                        <h4>Ejercicio 1: Ordenamiento de Libros</h4>
+                        <p>Tienes 5 libros diferentes y quieres ordenarlos en un estante. ¿De cuántas formas diferentes puedes ordenarlos?</p>
+                        <div class="input-group">
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="120">Verificar</button>
+                        </div>
+                        <div class="feedback"></div>
                     </div>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 2</h4>
-                        <p>En un concurso de talentos con 10 participantes, ¿de cuántas formas diferentes se pueden asignar el primer, segundo y tercer lugar?</p>
-                        
-                        <form data-exercise-id="exercise2-mod2">
-                            <label for="ex2-mod2-answer">Tu respuesta:</label>
-                            <input type="number" id="ex2-mod2-answer" name="q1" min="1" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                    <div class="exercise" data-exercise-id="modulo2-ex2">
+                        <h4>Ejercicio 2: Formación de Palabras</h4>
+                        <p>¿Cuántas palabras diferentes (con o sin sentido) se pueden formar con todas las letras de la palabra "ROMA"?</p>
+                        <div class="input-group">
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="24">Verificar</button>
+                        </div>
+                        <div class="feedback"></div>
                     </div>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 3</h4>
-                        <p>¿Cuántas palabras diferentes (con o sin sentido) se pueden formar con las letras de la palabra "COMBINATORIA"?</p>
-                        
-                        <form data-exercise-id="exercise3-mod2">
-                            <label for="ex3-mod2-answer">Tu respuesta:</label>
-                            <input type="number" id="ex3-mod2-answer" name="q1" min="1" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                    <div class="exercise" data-exercise-id="modulo2-ex3">
+                        <h4>Ejercicio 3: Permutaciones con Repetición</h4>
+                        <p>¿Cuántas palabras diferentes (con o sin sentido) se pueden formar con todas las letras de la palabra "BANANA"?</p>
+                        <div class="input-group">
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="60">Verificar</button>
+                        </div>
+                        <div class="feedback"></div>
+                        <div class="hint">
+                            <p>Recuerda que en "BANANA" hay 3 letras "A", 2 letras "N" y 1 letra "B".</p>
+                        </div>
                     </div>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 4</h4>
-                        <p>¿De cuántas formas diferentes se pueden ordenar 4 libros de matemáticas y 3 libros de física en un estante, si los libros de cada materia deben estar juntos?</p>
+                    <h4>Actividades Complementarias</h4>
+                    
+                    <div class="complementary-activity">
+                        <h5>Diseño de Banderas</h5>
+                        <p>En esta actividad, exploraremos cómo las permutaciones y variaciones se aplican al diseño de banderas.</p>
                         
-                        <form data-exercise-id="exercise4-mod2">
-                            <label for="ex4-mod2-answer">Tu respuesta:</label>
-                            <input type="number" id="ex4-mod2-answer" name="q1" min="1" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                        <h6>Materiales:</h6>
+                        <ul>
+                            <li>Papel de colores (rojo, azul, verde, amarillo y blanco)</li>
+                            <li>Tijeras</li>
+                            <li>Pegamento</li>
+                            <li>Cartulina</li>
+                        </ul>
+                        
+                        <h6>Instrucciones:</h6>
+                        <ol>
+                            <li>Corta rectángulos de igual tamaño de cada color.</li>
+                            <li>Diseña banderas de tres franjas verticales usando tres colores diferentes.</li>
+                            <li>¿Cuántas banderas diferentes puedes crear si:
+                                <ul>
+                                    <li>Usas exactamente los colores rojo, azul y verde? (Permutación)</li>
+                                    <li>Puedes elegir 3 colores de los 5 disponibles? (Variación)</li>
+                                </ul>
+                            </li>
+                            <li>Crea al menos 6 banderas diferentes y pégalas en la cartulina.</li>
+                        </ol>
+                        
+                        <div class="interactive-exercise">
+                            <p>¿Cuántas banderas diferentes de tres franjas verticales puedes crear si eliges 3 colores de los 5 disponibles y el orden importa?</p>
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="60">Verificar</button>
+                            <div class="feedback"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="complementary-activity">
+                        <h5>Problema: La Carrera de Atletismo</h5>
+                        <p>En una carrera de atletismo participan 8 corredores. Al finalizar, se otorgan medallas de oro, plata y bronce.</p>
+                        
+                        <div class="interactive-exercise">
+                            <p>¿De cuántas formas diferentes se pueden distribuir las medallas?</p>
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="336">Verificar</button>
+                            <div class="feedback"></div>
+                            <div class="hint">
+                                <p>Piensa en esto como una variación: estás seleccionando 3 personas de 8 y el orden importa (el primer lugar es diferente del segundo).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="interactive-exercise">
+                            <p>Si solo nos interesa saber quiénes son los tres primeros, sin importar el orden específico, ¿cuántas posibilidades hay?</p>
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="56">Verificar</button>
+                            <div class="feedback"></div>
+                            <div class="hint">
+                                <p>En este caso, estamos hablando de una combinación: seleccionar 3 personas de 8 sin importar el orden.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <button class="mark-complete btn" data-module-id="modulo2" data-section-id="seccion4">Marcar como completado</button>

@@ -177,50 +177,46 @@
             <section id="seccion4" class="module-section" style="display: none;">
                 <h3>1.4 Ejercicios Prácticos</h3>
                 <div class="module-content">
-                    <p>A continuación, se presentan algunos ejercicios para practicar los conceptos aprendidos en este módulo. Intenta resolverlos aplicando los principios multiplicativo y aditivo según corresponda.</p>
+                    <p>En esta sección, resolveremos algunos ejercicios prácticos aplicando los principios de conteo que hemos aprendido.</p>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 1</h4>
-                        <p>Una heladería ofrece 8 sabores de helado, 3 tipos de conos y 4 coberturas opcionales. Si un cliente elige un sabor, un tipo de cono y decide si quiere o no una cobertura (y cuál), ¿cuántas combinaciones diferentes son posibles?</p>
-                        
-                        <form data-exercise-id="exercise1">
-                            <label for="ex1-answer">Tu respuesta:</label>
-                            <input type="number" id="ex1-answer" name="q1" min="1" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                    <h4>Ejercicio 1:</h4>
+                    <p>Una pizzería ofrece 3 tamaños de pizza (pequeña, mediana, grande), 4 tipos de masa (delgada, gruesa, rellena de queso, integral) y 5 coberturas principales (pepperoni, jamón, champiñones, pimientos, aceitunas). ¿Cuántas pizzas diferentes se pueden crear eligiendo un tamaño, un tipo de masa y una cobertura?</p>
+                    
+                    <div class="interactive-exercise">
+                        <p>Aplica el principio multiplicativo:</p>
+                        <p>Número de tamaños × Número de masas × Número de coberturas = <input type="number" class="exercise-input" data-answer="60"> pizzas diferentes</p>
+                        <button class="check-answer btn">Verificar</button>
+                        <p class="feedback"></p>
                     </div>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 2</h4>
-                        <p>Un estudiante debe elegir 3 cursos de un total de 7 cursos disponibles. ¿De cuántas formas diferentes puede hacer su elección?</p>
-                        
-                        <form data-exercise-id="exercise2">
-                            <label for="ex2-answer">Tu respuesta:</label>
-                            <input type="number" id="ex2-answer" name="q1" min="1" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                    <h4>Ejercicio 2:</h4>
+                    <p>Un estudiante tiene que elegir 3 asignaturas optativas entre Matemáticas, Física, Química, Biología e Historia. ¿De cuántas formas diferentes puede hacer su elección?</p>
+                    
+                    <div class="interactive-exercise">
+                        <p>Este es un problema de combinaciones. Debemos calcular de cuántas formas podemos elegir 3 elementos de un conjunto de 5 elementos.</p>
+                        <p>Número de formas = <input type="number" class="exercise-input" data-answer="10"></p>
+                        <button class="check-answer btn">Verificar</button>
+                        <p class="feedback"></p>
                     </div>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 3</h4>
-                        <p>Una persona puede viajar de la ciudad A a la ciudad B por avión, tren o autobús. Hay 4 vuelos diarios, 3 trenes diarios y 2 autobuses diarios. ¿De cuántas formas diferentes puede la persona viajar de la ciudad A a la ciudad B en un día?</p>
-                        
-                        <form data-exercise-id="exercise3">
-                            <label for="ex3-answer">Tu respuesta:</label>
-                            <input type="number" id="ex3-answer" name="q1" min="1" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                    <h4>Ejercicio 3: El Candado</h4>
+                    <p>Un candado tiene una cerradura de combinación con dos discos. Cada disco tiene los números 1, 2 y 3. No puedes repetir un número. ¿Cuántos códigos diferentes son posibles? ¿Es el código 1-2 lo mismo que 2-1?</p>
+                    
+                    <div class="interactive-exercise">
+                        <p>Aplica el principio multiplicativo considerando que no se pueden repetir números:</p>
+                        <p>Número de códigos posibles = <input type="number" class="exercise-input" data-answer="6"></p>
+                        <p>¿Es el código 1-2 lo mismo que 2-1? <select class="exercise-input" data-answer="no"><option value="si">Sí</option><option value="no">No</option></select></p>
+                        <button class="check-answer btn">Verificar</button>
+                        <p class="feedback"></p>
                     </div>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 4</h4>
-                        <p>En un examen de opción múltiple, hay 10 preguntas y cada una tiene 4 opciones (a, b, c, d). ¿Cuántas formas diferentes hay de responder el examen si se debe responder a todas las preguntas?</p>
-                        
-                        <form data-exercise-id="exercise4">
-                            <label for="ex4-answer">Tu respuesta:</label>
-                            <input type="number" id="ex4-answer" name="q1" min="1" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                    <h4>Ejercicio 4: Camisetas del Equipo</h4>
+                    <p>Un equipo deportivo tiene tres colores para su camiseta: rojo, azul y amarillo. La camiseta tiene dos franjas, una superior y una inferior. ¿Cuántas camisetas diferentes de dos colores se pueden diseñar si los colores no se pueden repetir?</p>
+                    
+                    <div class="interactive-exercise">
+                        <p>Número de diseños posibles = <input type="number" class="exercise-input" data-answer="6"></p>
+                        <button class="check-answer btn">Verificar</button>
+                        <p class="feedback"></p>
                     </div>
                 </div>
                 <button class="mark-complete btn" data-module-id="modulo1" data-section-id="seccion4">Marcar como completado</button>
@@ -229,78 +225,100 @@
             <section id="seccion5" class="module-section" style="display: none;">
                 <h3>1.5 Evaluación del Módulo</h3>
                 <div class="module-content">
-                    <p>Completa la siguiente evaluación para verificar tu comprensión de los conceptos presentados en este módulo.</p>
+                    <p>Completa la siguiente evaluación para poner a prueba tu comprensión de los principios básicos de conteo.</p>
                     
-                    <div class="quiz">
-                        <h4>Evaluación del Módulo 1</h4>
+                    <div class="quiz" data-quiz-id="modulo1-quiz">
+                        <div class="question">
+                            <p>1. Si tienes 5 camisas y 3 pantalones, ¿cuántos conjuntos diferentes puedes formar?</p>
+                            <div class="options">
+                                <label><input type="radio" name="q1" value="a"> a) 8</label>
+                                <label><input type="radio" name="q1" value="b"> b) 15</label>
+                                <label><input type="radio" name="q1" value="c"> c) 5</label>
+                                <label><input type="radio" name="q1" value="d"> d) 15</label>
+                            </div>
+                        </div>
                         
-                        <form data-exercise-id="quiz1">
-                            <div class="question">
-                                <p><strong>1. ¿Cuál de los siguientes principios se utiliza cuando tenemos que elegir entre varias opciones mutuamente excluyentes?</strong></p>
-                                <div class="radio-group">
-                                    <label>
-                                        <input type="radio" name="q1" value="a"> a) Principio multiplicativo
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="q1" value="b"> b) Principio aditivo
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="q1" value="c"> c) Principio de inclusión-exclusión
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="q1" value="d"> d) Principio del palomar
-                                    </label>
-                                </div>
+                        <div class="question">
+                            <p>2. ¿Qué principio se aplica cuando contamos el número total de resultados posibles de una secuencia de eventos?</p>
+                            <div class="options">
+                                <label><input type="radio" name="q2" value="a"> a) Principio de inclusión-exclusión</label>
+                                <label><input type="radio" name="q2" value="b"> b) Principio aditivo</label>
+                                <label><input type="radio" name="q2" value="c"> c) Principio multiplicativo</label>
+                                <label><input type="radio" name="q2" value="d"> d) Principio de simetría</label>
                             </div>
-                            
-                            <div class="question">
-                                <p><strong>2. Un código postal consiste en 3 letras seguidas de 2 dígitos. Si las letras pueden repetirse y los dígitos también, ¿cuántos códigos postales diferentes son posibles?</strong></p>
-                                <div class="radio-group">
-                                    <label>
-                                        <input type="radio" name="q2" value="a"> a) 17,576,000
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="q2" value="b"> b) 676,000
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="q2" value="c"> c) 175,760
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="q2" value="d"> d) 67,600
-                                    </label>
-                                </div>
+                        </div>
+                        
+                        <div class="question">
+                            <p>3. Un restaurante ofrece 3 entradas, 4 platos principales y 2 postres. Si un cliente elige una entrada, un plato principal y un postre, ¿cuántos menús diferentes puede crear?</p>
+                            <div class="options">
+                                <label><input type="radio" name="q3" value="a"> a) 9</label>
+                                <label><input type="radio" name="q3" value="b"> b) 12</label>
+                                <label><input type="radio" name="q3" value="c"> c) 24</label>
+                                <label><input type="radio" name="q3" value="d"> d) 14</label>
                             </div>
-                            
-                            <div class="question">
-                                <p><strong>3. En una cafetería, se puede elegir entre 3 tipos de café, 2 tipos de té o 4 tipos de refrescos. ¿Cuántas bebidas diferentes puede elegir un cliente?</strong></p>
-                                <input type="number" name="q3" min="1" required>
+                        </div>
+                        
+                        <div class="question">
+                            <p>4. ¿Cuál de las siguientes situaciones requiere el uso del principio aditivo?</p>
+                            <div class="options">
+                                <label><input type="radio" name="q4" value="a"> a) Contar el número de formas de elegir un postre y una bebida</label>
+                                <label><input type="radio" name="q4" value="b"> b) Contar el número de formas de elegir un postre o una bebida</label>
+                                <label><input type="radio" name="q4" value="c"> c) Contar el número de formas de ordenar 3 libros en un estante</label>
+                                <label><input type="radio" name="q4" value="d"> d) Contar el número de formas de elegir 3 libros de una colección de 10</label>
                             </div>
-                            
-                            <div class="question">
-                                <p><strong>4. ¿Cuál de las siguientes afirmaciones es correcta sobre el principio multiplicativo?</strong></p>
-                                <div class="radio-group">
-                                    <label>
-                                        <input type="radio" name="q4" value="a"> a) Se utiliza cuando las opciones son mutuamente excluyentes
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="q4" value="b"> b) Se utiliza para contar el número total de formas de realizar una secuencia de eventos
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="q4" value="c"> c) Siempre resulta en menos opciones que el principio aditivo
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="q4" value="d"> d) No se puede combinar con el principio aditivo
-                                    </label>
-                                </div>
+                        </div>
+                        
+                        <div class="question">
+                            <p>5. Si hay 4 rutas de la ciudad A a la ciudad B y 3 rutas de la ciudad B a la ciudad C, ¿cuántas rutas diferentes hay de la ciudad A a la ciudad C pasando por B?</p>
+                            <div class="options">
+                                <label><input type="radio" name="q5" value="a"> a) 7</label>
+                                <label><input type="radio" name="q5" value="b"> b) 12</label>
+                                <label><input type="radio" name="q5" value="c"> c) 4</label>
+                                <label><input type="radio" name="q5" value="d"> d) 3</label>
                             </div>
-                            
-                            <div class="question">
-                                <p><strong>5. Un estudiante debe elegir exactamente 2 cursos: uno de matemáticas y uno de ciencias. Si hay 4 cursos de matemáticas y 3 cursos de ciencias disponibles, ¿cuántas combinaciones diferentes de cursos puede elegir?</strong></p>
-                                <input type="number" name="q5" min="1" required>
-                            </div>
-                            
-                            <button type="submit" class="btn">Enviar Evaluación</button>
-                        </form>
+                        </div>
+                        
+                        <button class="submit-quiz btn">Enviar respuestas</button>
+                        <div class="quiz-results"></div>
+                    </div>
+                    
+                    <h4>Actividades Complementarias</h4>
+                    
+                    <div class="complementary-activity">
+                        <h5>Aplicación Artística: El Círculo Cromático</h5>
+                        <p>El objetivo es descubrir los colores secundarios combinando los colores primarios.</p>
+                        
+                        <h6>Materiales:</h6>
+                        <ul>
+                            <li>Pintura roja, amarilla y azul</li>
+                            <li>Un pincel</li>
+                            <li>Una hoja de papel con un círculo simple dibujado</li>
+                        </ul>
+                        
+                        <h6>Instrucciones:</h6>
+                        <ol>
+                            <li>Basándote en tu respuesta al problema de las camisetas del equipo, ya sabes cuántos pares de colores puedes formar.</li>
+                            <li>Combina cada par posible de colores primarios (rojo + amarillo, amarillo + azul, azul + rojo).</li>
+                            <li>Pinta los colores secundarios resultantes (naranja, verde, violeta) en tu círculo, ubicándolos entre los colores primarios que los crearon.</li>
+                        </ol>
+                        
+                        <div class="activity-image">
+                            <img src="../recursos/imagenes/circulo_cromatico.svg" alt="Círculo cromático básico de seis colores" class="img-responsive">
+                        </div>
+                    </div>
+                    
+                    <div class="complementary-activity">
+                        <h5>Lengua e Interpretación</h5>
+                        <p>Lee las siguientes oraciones y responde las preguntas a continuación:</p>
+                        <blockquote>
+                            "En matemáticas, una combinación se refiere a la selección de elementos de un conjunto donde el orden de selección no importa. Por ejemplo, elegir queso y jamón para un sándwich es una combinación. En arte, una mezcla de colores crea nuevos tonos y matices."
+                        </blockquote>
+                        
+                        <div class="interactive-exercise">
+                            <p>¿Cuál es la principal diferencia entre una "combinación" matemática y una "mezcla" artística?</p>
+                            <textarea class="exercise-input" rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                            <button class="save-answer btn">Guardar respuesta</button>
+                        </div>
                     </div>
                 </div>
                 <button class="mark-complete btn" data-module-id="modulo1" data-section-id="seccion5">Marcar como completado</button>

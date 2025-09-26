@@ -199,50 +199,71 @@
             <section id="seccion4" class="module-section" style="display: none;">
                 <h3>4.4 Ejercicios Prácticos</h3>
                 <div class="module-content">
-                    <p>A continuación, se presentan algunos ejercicios para practicar las aplicaciones de la combinatoria.</p>
+                    <p>Resuelve los siguientes ejercicios para aplicar lo aprendido sobre aplicaciones de la combinatoria.</p>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 1</h4>
+                    <div class="exercise" data-exercise-id="modulo4-ex1">
+                        <h4>Ejercicio 1: Probabilidad de Cumpleaños</h4>
                         <p>En una clase de 25 estudiantes, ¿cuál es la probabilidad de que al menos 2 estudiantes cumplan años el mismo día? (Suponga que hay 365 días en un año y que los cumpleaños se distribuyen uniformemente).</p>
-                        
-                        <form data-exercise-id="exercise1-mod4">
-                            <label for="ex1-mod4-answer">Tu respuesta (en porcentaje, sin el símbolo %):</label>
-                            <input type="number" id="ex1-mod4-answer" name="q1" min="0" max="100" step="0.01" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                        <div class="input-group">
+                            <input type="number" class="exercise-input" min="0" max="100" step="0.01" placeholder="Porcentaje">
+                            <button class="check-answer btn" data-answer="56.87">Verificar</button>
+                        </div>
+                        <div class="feedback"></div>
+                        <div class="hint">
+                            <p>Calcula primero la probabilidad de que todos tengan cumpleaños diferentes y luego resta de 1.</p>
+                        </div>
                     </div>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 2</h4>
+                    <div class="exercise" data-exercise-id="modulo4-ex2">
+                        <h4>Ejercicio 2: Probabilidad en Lotería</h4>
                         <p>En un juego de lotería, se seleccionan 5 números de un total de 35. ¿Cuál es la probabilidad de acertar exactamente 3 números?</p>
-                        
-                        <form data-exercise-id="exercise2-mod4">
-                            <label for="ex2-mod4-answer">Tu respuesta (en porcentaje, sin el símbolo %):</label>
-                            <input type="number" id="ex2-mod4-answer" name="q1" min="0" max="100" step="0.01" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                        <div class="input-group">
+                            <input type="number" class="exercise-input" min="0" max="100" step="0.01" placeholder="Porcentaje">
+                            <button class="check-answer btn" data-answer="8.37">Verificar</button>
+                        </div>
+                        <div class="feedback"></div>
+                        <div class="hint">
+                            <p>Usa la fórmula: (C(5,3) × C(30,2)) / C(35,5)</p>
+                        </div>
                     </div>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 3</h4>
-                        <p>¿Cuántas contraseñas diferentes de 6 caracteres se pueden formar si los caracteres deben ser letras minúsculas y debe haber al menos una vocal?</p>
+                    <h4>Actividades Complementarias</h4>
+                    
+                    <div class="complementary-activity">
+                        <h5>Problema: Contraseñas</h5>
+                        <p>Consideremos contraseñas formadas por letras minúsculas.</p>
                         
-                        <form data-exercise-id="exercise3-mod4">
-                            <label for="ex3-mod4-answer">Tu respuesta:</label>
-                            <input type="number" id="ex3-mod4-answer" name="q1" min="1" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                        <div class="interactive-exercise">
+                            <p>¿Cuántas contraseñas diferentes de 6 caracteres se pueden formar si los caracteres deben ser letras minúsculas y debe haber al menos una vocal?</p>
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="308915776">Verificar</button>
+                            <div class="feedback"></div>
+                            <div class="hint">
+                                <p>Calcula el total de contraseñas posibles (26^6) y resta las que no tienen vocales (21^6).</p>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="exercise">
-                        <h4>Ejercicio 4</h4>
-                        <p>En un experimento binomial con 12 ensayos y probabilidad de éxito 0.4, ¿cuál es la probabilidad de obtener exactamente 5 éxitos?</p>
+                    <div class="complementary-activity">
+                        <h5>Problema: Distribución Binomial</h5>
+                        <p>Aplicaciones de la distribución binomial:</p>
                         
-                        <form data-exercise-id="exercise4-mod4">
-                            <label for="ex4-mod4-answer">Tu respuesta (en porcentaje, sin el símbolo %):</label>
-                            <input type="number" id="ex4-mod4-answer" name="q1" min="0" max="100" step="0.01" required>
-                            <button type="submit" class="btn">Verificar</button>
-                        </form>
+                        <div class="interactive-exercise">
+                            <p>En un experimento binomial con 12 ensayos y probabilidad de éxito 0.4, ¿cuál es la probabilidad de obtener exactamente 5 éxitos?</p>
+                            <input type="number" class="exercise-input" min="0" max="100" step="0.01" placeholder="Porcentaje">
+                            <button class="check-answer btn" data-answer="21.93">Verificar</button>
+                            <div class="feedback"></div>
+                            <div class="hint">
+                                <p>Usa la fórmula: C(12,5) × (0.4)^5 × (0.6)^7</p>
+                            </div>
+                        </div>
+                        
+                        <div class="interactive-exercise">
+                            <p>Si lanzamos una moneda justa 10 veces, ¿cuál es la probabilidad de obtener exactamente 6 caras?</p>
+                            <input type="number" class="exercise-input" min="0" max="100" step="0.01" placeholder="Porcentaje">
+                            <button class="check-answer btn" data-answer="20.51">Verificar</button>
+                            <div class="feedback"></div>
+                        </div>
                     </div>
                 </div>
                 <button class="mark-complete btn" data-module-id="modulo4" data-section-id="seccion4">Marcar como completado</button>
