@@ -43,13 +43,16 @@
                     <li><a href="#seccion1" class="active">2.1 Concepto de Permutación</a></li>
                     <li><a href="#seccion2">2.2 Permutaciones sin Repetición</a></li>
                     <li><a href="#seccion3">2.3 Permutaciones con Repetición</a></li>
-                    <li><a href="#seccion4">2.4 Ejercicios Prácticos</a></li>
-                    <li><a href="#seccion5">2.5 Evaluación del Módulo</a></li>
+                    <li><a href="#seccion4">2.4 Concepto de Variación</a></li>
+                    <li><a href="#seccion5">2.5 Variaciones sin Repetición</a></li>
+                    <li><a href="#seccion6">2.6 Variaciones con Repetición</a></li>
+                    <li><a href="#seccion7">2.7 Ejercicios Prácticos</a></li>
+                    <li><a href="#seccion8">2.8 Evaluación del Módulo</a></li>
                 </ul>
             </section>
 
             <section id="seccion1" class="module-section">
-                <h3>2.1 Concepto de Permutación</h3>
+                <h3 class="icon-permutation">2.1 Concepto de Permutación</h3>
                 <div class="module-content">
                     <p>Una permutación es un arreglo ordenado de elementos donde el orden importa. En otras palabras, una permutación es una disposición específica de un conjunto de elementos donde cada elemento aparece exactamente una vez.</p>
                     
@@ -176,12 +179,180 @@
             </section>
 
             <section id="seccion4" class="module-section" style="display: none;">
-                <h3>2.4 Ejercicios Prácticos</h3>
+                <h3 class="icon-variation">2.4 Concepto de Variación</h3>
                 <div class="module-content">
-                    <p>Resuelve los siguientes ejercicios para aplicar lo aprendido sobre permutaciones.</p>
+                    <p>Las variaciones son arreglos ordenados de elementos donde el orden importa, pero a diferencia de las permutaciones, no necesariamente utilizamos todos los elementos disponibles.</p>
+                    
+                    <div class="definition">
+                        <h4>Definición: Variación</h4>
+                        <p>Una variación de \(n\) elementos tomados de \(r\) en \(r\) (donde \(r \leq n\)) es un arreglo ordenado de \(r\) elementos seleccionados de un conjunto de \(n\) elementos distintos.</p>
+                        <p>La diferencia principal con las permutaciones es que en las variaciones podemos tomar solo una parte de los elementos disponibles.</p>
+                    </div>
+                    
+                    <h4>Diferencias entre Permutaciones y Variaciones</h4>
+                    <div class="comparison-table">
+                        <table>
+                            <tr>
+                                <th>Aspecto</th>
+                                <th>Permutaciones</th>
+                                <th>Variaciones</th>
+                            </tr>
+                            <tr>
+                                <td>Elementos utilizados</td>
+                                <td>Todos los elementos del conjunto</td>
+                                <td>Subconjunto de elementos (r ≤ n)</td>
+                            </tr>
+                            <tr>
+                                <td>Orden</td>
+                                <td>Importa</td>
+                                <td>Importa</td>
+                            </tr>
+                            <tr>
+                                <td>Fórmula general</td>
+                                <td>P(n,n) = n!</td>
+                                <td>V(n,r) = n!/(n-r)!</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <h4>Ejemplo Ilustrativo</h4>
+                    <p>Consideremos el conjunto {A, B, C, D}:</p>
+                    <ul>
+                        <li><strong>Permutaciones de 4 elementos:</strong> ABCD, ABDC, ACBD, ACDB, ADBC, ADCB, etc. (24 en total)</li>
+                        <li><strong>Variaciones de 4 elementos tomados de 2 en 2:</strong> AB, AC, AD, BA, BC, BD, CA, CB, CD, DA, DB, DC (12 en total)</li>
+                    </ul>
+                    
+                    <h4>Aplicaciones de las Variaciones</h4>
+                    <p>Las variaciones tienen aplicaciones importantes en:</p>
+                    <ul>
+                        <li><strong>Códigos y contraseñas:</strong> Formación de códigos de longitud específica.</li>
+                        <li><strong>Competencias deportivas:</strong> Selección de podios y clasificaciones.</li>
+                        <li><strong>Planificación:</strong> Asignación de tareas en orden específico.</li>
+                        <li><strong>Diseño:</strong> Selección ordenada de colores, formas o elementos.</li>
+                    </ul>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo2" data-section-id="seccion4">Marcar como completado</button>
+            </section>
+
+            <section id="seccion5" class="module-section" style="display: none;">
+                <h3>2.5 Variaciones sin Repetición</h3>
+                <div class="module-content">
+                    <p>Las variaciones sin repetición se refieren a los diferentes ordenamientos que podemos formar seleccionando \(r\) elementos de un conjunto de \(n\) elementos distintos, donde cada elemento se puede usar solo una vez.</p>
+                    
+                    <div class="definition">
+                        <h4>Definición: Variaciones sin Repetición</h4>
+                        <p>El número de variaciones de \(n\) elementos distintos tomados de \(r\) en \(r\) (donde \(r \leq n\)) se denota como \(V(n,r)\) o \(V_r^n\) y se calcula mediante la fórmula:</p>
+                        <p>\[V(n,r) = \frac{n!}{(n-r)!}\]</p>
+                        <p>Esta fórmula es idéntica a la de permutaciones parciales, ya que las variaciones sin repetición son equivalentes a las permutaciones de \(r\) elementos seleccionados de \(n\).</p>
+                    </div>
+                    
+                    <h4>Ejemplo 1:</h4>
+                    <p>En una clase de 10 estudiantes, ¿de cuántas formas se pueden elegir y ordenar 3 estudiantes para formar un comité directivo (presidente, vicepresidente y secretario)?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Esto es una variación de 10 elementos tomados de 3 en 3, por lo que:</p>
+                        <p>\[V(10,3) = \frac{10!}{(10-3)!} = \frac{10!}{7!} = 10 \times 9 \times 8 = 720\]</p>
+                        <p>Hay 720 formas diferentes de formar el comité directivo.</p>
+                    </div>
+                    
+                    <h4>Ejemplo 2:</h4>
+                    <p>Un artista tiene 8 colores diferentes y quiere crear una paleta usando exactamente 4 colores en un orden específico. ¿Cuántas paletas diferentes puede crear?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Esto es una variación de 8 elementos tomados de 4 en 4, por lo que:</p>
+                        <p>\[V(8,4) = \frac{8!}{(8-4)!} = \frac{8!}{4!} = 8 \times 7 \times 6 \times 5 = 1,680\]</p>
+                        <p>El artista puede crear 1,680 paletas diferentes.</p>
+                    </div>
+                    
+                    <h4>Método de Conteo Directo</h4>
+                    <p>Para entender mejor las variaciones sin repetición, podemos usar el principio multiplicativo:</p>
+                    <ul>
+                        <li>Para la primera posición: tenemos \(n\) opciones</li>
+                        <li>Para la segunda posición: tenemos \(n-1\) opciones</li>
+                        <li>Para la tercera posición: tenemos \(n-2\) opciones</li>
+                        <li>...</li>
+                        <li>Para la r-ésima posición: tenemos \(n-r+1\) opciones</li>
+                    </ul>
+                    <p>Por tanto: \(V(n,r) = n \times (n-1) \times (n-2) \times ... \times (n-r+1)\)</p>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo2" data-section-id="seccion5">Marcar como completado</button>
+            </section>
+
+            <section id="seccion6" class="module-section" style="display: none;">
+                <h3>2.6 Variaciones con Repetición</h3>
+                <div class="module-content">
+                    <p>Las variaciones con repetición permiten que los elementos se puedan repetir en el arreglo. Esto significa que un mismo elemento puede aparecer múltiples veces en diferentes posiciones.</p>
+                    
+                    <div class="definition">
+                        <h4>Definición: Variaciones con Repetición</h4>
+                        <p>El número de variaciones con repetición de \(n\) elementos distintos tomados de \(r\) en \(r\) se denota como \(VR(n,r)\) y se calcula mediante la fórmula:</p>
+                        <p>\[VR(n,r) = n^r\]</p>
+                        <p>Esta fórmula es mucho más simple porque para cada posición tenemos siempre \(n\) opciones disponibles.</p>
+                    </div>
+                    
+                    <h4>Ejemplo 1:</h4>
+                    <p>¿Cuántos números de 4 dígitos se pueden formar usando los dígitos {1, 2, 3, 4, 5} si se permite la repetición?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Esto es una variación con repetición de 5 elementos tomados de 4 en 4, por lo que:</p>
+                        <p>\[VR(5,4) = 5^4 = 625\]</p>
+                        <p>Se pueden formar 625 números diferentes de 4 dígitos.</p>
+                    </div>
+                    
+                    <h4>Ejemplo 2:</h4>
+                    <p>Un diseñador quiere crear un patrón de 6 elementos usando 3 formas geométricas diferentes (círculo, cuadrado, triángulo). Si puede repetir las formas, ¿cuántos patrones diferentes puede crear?</p>
+                    
+                    <div class="solution">
+                        <p><strong>Solución:</strong></p>
+                        <p>Esto es una variación con repetición de 3 elementos tomados de 6 en 6, por lo que:</p>
+                        <p>\[VR(3,6) = 3^6 = 729\]</p>
+                        <p>El diseñador puede crear 729 patrones diferentes.</p>
+                    </div>
+                    
+                    <h4>Aplicaciones Prácticas</h4>
+                    <p>Las variaciones con repetición son especialmente útiles en:</p>
+                    <ul>
+                        <li><strong>Contraseñas y códigos:</strong> Formación de códigos donde se pueden repetir caracteres.</li>
+                        <li><strong>Secuencias genéticas:</strong> Combinaciones de bases nitrogenadas en el ADN.</li>
+                        <li><strong>Diseño de patrones:</strong> Creación de diseños repetitivos.</li>
+                        <li><strong>Sistemas de numeración:</strong> Formación de números en diferentes bases.</li>
+                        <li><strong>Experimentos probabilísticos:</strong> Resultados de experimentos repetidos.</li>
+                    </ul>
+                    
+                    <h4>Comparación de Fórmulas</h4>
+                    <div class="formula-comparison">
+                        <table>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Fórmula</th>
+                                <th>Características</th>
+                            </tr>
+                            <tr>
+                                <td>Variaciones sin repetición</td>
+                                <td>\(V(n,r) = \frac{n!}{(n-r)!}\)</td>
+                                <td>Cada elemento se usa máximo una vez</td>
+                            </tr>
+                            <tr>
+                                <td>Variaciones con repetición</td>
+                                <td>\(VR(n,r) = n^r\)</td>
+                                <td>Los elementos se pueden repetir</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo2" data-section-id="seccion6">Marcar como completado</button>
+            </section>
+
+            <section id="seccion7" class="module-section" style="display: none;">
+                <h3>2.7 Ejercicios Prácticos</h3>
+                <div class="module-content">
+                    <p>Resuelve los siguientes ejercicios para aplicar lo aprendido sobre permutaciones y variaciones.</p>
                     
                     <div class="exercise" data-exercise-id="modulo2-ex1">
-                        <h4>Ejercicio 1: Ordenamiento de Libros</h4>
+                        <h4>Ejercicio 1: Permutaciones - Ordenamiento de Libros</h4>
                         <p>Tienes 5 libros diferentes y quieres ordenarlos en un estante. ¿De cuántas formas diferentes puedes ordenarlos?</p>
                         <div class="input-group">
                             <input type="number" class="exercise-input" min="1">
@@ -191,7 +362,7 @@
                     </div>
                     
                     <div class="exercise" data-exercise-id="modulo2-ex2">
-                        <h4>Ejercicio 2: Formación de Palabras</h4>
+                        <h4>Ejercicio 2: Permutaciones - Formación de Palabras</h4>
                         <p>¿Cuántas palabras diferentes (con o sin sentido) se pueden formar con todas las letras de la palabra "ROMA"?</p>
                         <div class="input-group">
                             <input type="number" class="exercise-input" min="1">
@@ -201,6 +372,24 @@
                     </div>
                     
                     <div class="exercise" data-exercise-id="modulo2-ex3">
+                        <h4>Ejercicio 3: Variaciones sin Repetición - Comité Directivo</h4>
+                        <p>En una clase de 12 estudiantes, ¿de cuántas formas se pueden elegir y ordenar 4 estudiantes para formar un comité directivo?</p>
+                        <div class="input-group">
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="11880">Verificar</button>
+                        </div>
+                        <div class="feedback"></div>
+                    </div>
+                    
+                    <div class="exercise" data-exercise-id="modulo2-ex4">
+                        <h4>Ejercicio 4: Variaciones con Repetición - Códigos</h4>
+                        <p>¿Cuántos códigos de 3 dígitos se pueden formar usando los números {1, 2, 3, 4} si se permite la repetición?</p>
+                        <div class="input-group">
+                            <input type="number" class="exercise-input" min="1">
+                            <button class="check-answer btn" data-answer="64">Verificar</button>
+                        </div>
+                        <div class="feedback"></div>
+                    </div>
                         <h4>Ejercicio 3: Permutaciones con Repetición</h4>
                         <p>¿Cuántas palabras diferentes (con o sin sentido) se pueden formar con todas las letras de la palabra "BANANA"?</p>
                         <div class="input-group">
@@ -276,8 +465,8 @@
                 <button class="mark-complete btn" data-module-id="modulo2" data-section-id="seccion4">Marcar como completado</button>
             </section>
 
-            <section id="seccion5" class="module-section" style="display: none;">
-                <h3>2.5 Evaluación del Módulo</h3>
+            <section id="seccion8" class="module-section" style="display: none;">
+                <h3>2.8 Evaluación del Módulo</h3>
                 <div class="module-content">
                     <p>Completa la siguiente evaluación para verificar tu comprensión de los conceptos de permutaciones presentados en este módulo.</p>
                     

@@ -43,13 +43,14 @@
                     <li><a href="#seccion1" class="active">4.1 Aplicaciones en Probabilidad</a></li>
                     <li><a href="#seccion2">4.2 Aplicaciones en Estadística</a></li>
                     <li><a href="#seccion3">4.3 Aplicaciones en Informática</a></li>
-                    <li><a href="#seccion4">4.4 Ejercicios Prácticos</a></li>
-                    <li><a href="#seccion5">4.5 Evaluación del Módulo</a></li>
+                    <li><a href="#seccion4">4.4 Aplicaciones en el Arte: Círculo Cromático</a></li>
+                    <li><a href="#seccion5">4.5 Ejercicios Prácticos</a></li>
+                    <li><a href="#seccion6">4.6 Evaluación del Módulo</a></li>
                 </ul>
             </section>
 
             <section id="seccion1" class="module-section">
-                <h3>4.1 Aplicaciones en Probabilidad</h3>
+                <h3 class="icon-probability">4.1 Aplicaciones en Probabilidad</h3>
                 <div class="module-content">
                     <p>La combinatoria es fundamental en el cálculo de probabilidades, especialmente cuando se trata de contar casos favorables y casos posibles en un espacio muestral.</p>
                     
@@ -104,7 +105,7 @@
             </section>
 
             <section id="seccion2" class="module-section" style="display: none;">
-                <h3>4.2 Aplicaciones en Estadística</h3>
+                <h3 class="icon-statistics">4.2 Aplicaciones en Estadística</h3>
                 <div class="module-content">
                     <p>La combinatoria es esencial en estadística, especialmente en el muestreo, análisis de datos y diseño experimental.</p>
                     
@@ -146,7 +147,7 @@
             </section>
 
             <section id="seccion3" class="module-section" style="display: none;">
-                <h3>4.3 Aplicaciones en Informática</h3>
+                <h3 class="icon-computer">4.3 Aplicaciones en Informática</h3>
                 <div class="module-content">
                     <p>La combinatoria tiene numerosas aplicaciones en informática y ciencias de la computación.</p>
                     
@@ -197,7 +198,93 @@
             </section>
 
             <section id="seccion4" class="module-section" style="display: none;">
-                <h3>4.4 Ejercicios Prácticos</h3>
+                <h3>4.4 Aplicaciones en el Arte: Círculo Cromático</h3>
+                <div class="module-content">
+                    <p>La combinatoria tiene fascinantes aplicaciones en el arte, especialmente en el estudio del color y sus combinaciones. El círculo cromático es una herramienta fundamental que nos permite explorar las relaciones entre colores desde una perspectiva matemática.</p>
+                    
+                    <div class="definition">
+                        <h4 class="icon-art">El Círculo Cromático</h4>
+                        <p>El círculo cromático es una representación circular de los colores del espectro visible, organizado de manera que los colores relacionados estén cerca unos de otros. Tradicionalmente se compone de 12 colores principales:</p>
+                        <div class="color-wheel"></div>
+                        <ul>
+                            <li><strong>Colores primarios:</strong> Rojo, Azul, Amarillo (3 colores)</li>
+                            <li><strong>Colores secundarios:</strong> Verde, Naranja, Violeta (3 colores)</li>
+                            <li><strong>Colores terciarios:</strong> Rojo-naranja, Amarillo-naranja, Amarillo-verde, Azul-verde, Azul-violeta, Rojo-violeta (6 colores)</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Combinaciones Cromáticas y Combinatoria</h4>
+                    <p>La teoría del color utiliza principios combinatorios para crear armonías visuales. Veamos las principales combinaciones:</p>
+                    
+                    <div class="color-scheme">
+                        <h5>1. Colores Análogos</h5>
+                        <p>Son colores que están adyacentes en el círculo cromático. Si consideramos grupos de 3 colores consecutivos:</p>
+                        <p>En un círculo de 12 colores, el número de combinaciones análogas de 3 colores es: <strong>12 combinaciones</strong></p>
+                        <p><em>Ejemplos:</em> Rojo-Rojo-naranja-Naranja, Azul-Azul-verde-Verde</p>
+                    </div>
+                    
+                    <div class="color-scheme">
+                        <h5>2. Colores Complementarios</h5>
+                        <p>Son colores que están directamente opuestos en el círculo cromático (separados por 6 posiciones):</p>
+                        <p>En un círculo de 12 colores, el número de pares complementarios es: <strong>6 pares</strong></p>
+                        <p><em>Ejemplos:</em> Rojo-Verde, Azul-Naranja, Amarillo-Violeta</p>
+                    </div>
+                    
+                    <div class="color-scheme">
+                        <h5>3. Triadas</h5>
+                        <p>Son tres colores equidistantes en el círculo cromático (separados por 4 posiciones cada uno):</p>
+                        <p>En un círculo de 12 colores, el número de triadas posibles es: <strong>4 triadas</strong></p>
+                        <p>Esto se calcula como: \(\frac{12}{3} = 4\) triadas únicas</p>
+                        <p><em>Ejemplos:</em> Rojo-Amarillo-Azul (colores primarios), Verde-Naranja-Violeta (colores secundarios)</p>
+                    </div>
+                    
+                    <div class="color-scheme">
+                        <h5>4. Tétradas (Colores Cuadrados)</h5>
+                        <p>Son cuatro colores equidistantes en el círculo cromático (separados por 3 posiciones cada uno):</p>
+                        <p>En un círculo de 12 colores, el número de tétradas posibles es: <strong>3 tétradas</strong></p>
+                        <p>Esto se calcula como: \(\frac{12}{4} = 3\) tétradas únicas</p>
+                        <p><em>Ejemplo:</em> Rojo-Amarillo-verde-Azul-violeta</p>
+                    </div>
+                    
+                    <h4>Análisis Combinatorio de Paletas de Colores</h4>
+                    <p>Podemos aplicar principios combinatorios para analizar las posibilidades creativas:</p>
+                    
+                    <div class="example">
+                        <h4>Ejemplo 1: Selección de Colores para una Obra</h4>
+                        <p>Un artista quiere crear una obra usando exactamente 4 colores del círculo cromático de 12 colores. ¿Cuántas combinaciones diferentes puede elegir?</p>
+                        <p><strong>Solución:</strong> Esto es una combinación de 12 elementos tomados de 4 en 4:</p>
+                        <p>\[C(12,4) = \binom{12}{4} = \frac{12!}{4!(12-4)!} = \frac{12!}{4!8!} = 495\]</p>
+                        <p>El artista tiene <strong>495 combinaciones diferentes</strong> para elegir.</p>
+                    </div>
+                    
+                    <div class="example">
+                        <h4>Ejemplo 2: Diseño de Logotipos</h4>
+                        <p>Una empresa quiere diseñar un logotipo usando una triada de colores. Si consideramos que pueden usar cualquier intensidad (claro, medio, oscuro) para cada color de la triada, ¿cuántas variaciones pueden crear?</p>
+                        <p><strong>Solución:</strong> Hay 4 triadas posibles y 3 intensidades para cada uno de los 3 colores:</p>
+                        <p>Variaciones por triada: \(3^3 = 27\) variaciones</p>
+                        <p>Total de variaciones: \(4 \times 27 = 108\) variaciones diferentes</p>
+                    </div>
+                    
+                    <h4>Aplicaciones Prácticas en el Arte</h4>
+                    <ul>
+                        <li><strong>Pintura:</strong> Selección de paletas armoniosas para composiciones</li>
+                        <li><strong>Diseño gráfico:</strong> Creación de esquemas de color para marcas y publicidad</li>
+                        <li><strong>Decoración de interiores:</strong> Combinación de colores para espacios habitables</li>
+                        <li><strong>Moda:</strong> Coordinación de colores en vestuario y accesorios</li>
+                        <li><strong>Arte digital:</strong> Generación algorítmica de paletas de colores</li>
+                    </ul>
+                    
+                    <div class="activity">
+                        <h4>Actividad Práctica: Análisis de Paletas</h4>
+                        <p>Imagina que eres un diseñador y necesitas crear 5 paletas diferentes para una campaña publicitaria. Cada paleta debe usar exactamente 3 colores del círculo cromático, y al menos una debe ser una triada perfecta.</p>
+                        <p><strong>Desafío:</strong> Calcula cuántas formas diferentes tienes de seleccionar estas 5 paletas si no puedes repetir ninguna combinación de 3 colores.</p>
+                    </div>
+                </div>
+                <button class="mark-complete btn" data-module-id="modulo4" data-section-id="seccion4">Marcar como completado</button>
+            </section>
+
+            <section id="seccion5" class="module-section" style="display: none;">
+                <h3>4.5 Ejercicios Prácticos</h3>
                 <div class="module-content">
                     <p>Resuelve los siguientes ejercicios para aplicar lo aprendido sobre aplicaciones de la combinatoria.</p>
                     
@@ -269,8 +356,8 @@
                 <button class="mark-complete btn" data-module-id="modulo4" data-section-id="seccion4">Marcar como completado</button>
             </section>
 
-            <section id="seccion5" class="module-section" style="display: none;">
-                <h3>4.5 Evaluación del Módulo</h3>
+            <section id="seccion6" class="module-section" style="display: none;">
+                <h3>4.6 Evaluación del Módulo</h3>
                 <div class="module-content">
                     <p>Completa la siguiente evaluación para verificar tu comprensión de las aplicaciones de la combinatoria presentadas en este módulo.</p>
                     

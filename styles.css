@@ -271,8 +271,226 @@ button[type="submit"]:hover {
     border-top: 1px solid #ecf0f1;
 }
 
-/* Responsive */
+/* Estilos para elementos visuales y gráficos */
+.visual-element {
+    text-align: center;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 2px dashed #e9ecef;
+}
+
+.icon-math {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.color-wheel {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 1rem auto;
+    background: conic-gradient(
+        #ff0000 0deg 30deg,
+        #ff8000 30deg 60deg,
+        #ffff00 60deg 90deg,
+        #80ff00 90deg 120deg,
+        #00ff00 120deg 150deg,
+        #00ff80 150deg 180deg,
+        #00ffff 180deg 210deg,
+        #0080ff 210deg 240deg,
+        #0000ff 240deg 270deg,
+        #8000ff 270deg 300deg,
+        #ff00ff 300deg 330deg,
+        #ff0080 330deg 360deg
+    );
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.color-scheme {
+    background-color: #f8f9fa;
+    border-left: 4px solid #e74c3c;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.color-scheme h5 {
+    color: #e74c3c;
+    margin-bottom: 0.5rem;
+}
+
+.combinatorial-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    color: white;
+}
+
+.math-symbol {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3498db;
+    background-color: #ecf0f1;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    margin: 0 0.2rem;
+}
+
+/* Estilos para definiciones mejoradas */
+.definition {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.definition h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* Estilos para ejemplos mejorados */
+.example {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.example h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Estilos para soluciones */
+.solution {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #333;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border-left: 4px solid #f39c12;
+}
+
+.solution strong {
+    color: #e67e22;
+}
+
+/* Estilos para actividades */
+.activity {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #333;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border-left: 4px solid #9b59b6;
+}
+
+.activity h4 {
+    color: #8e44ad;
+    margin-bottom: 1rem;
+}
+
+/* Iconos matemáticos usando Unicode */
+.icon-permutation::before {
+    content: "🔄";
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.icon-combination::before {
+    content: "🎯";
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.icon-variation::before {
+    content: "🔀";
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.icon-art::before {
+    content: "🎨";
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.icon-probability::before {
+    content: "🎲";
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.icon-statistics::before {
+    content: "📊";
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.icon-computer::before {
+    content: "💻";
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+/* Mejoras para fórmulas matemáticas */
+.formula-highlight {
+    background-color: #f8f9fa;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Animaciones sutiles */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.module-section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive design mejorado */
 @media (max-width: 768px) {
+    .color-wheel {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .combinatorial-visual {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .math-symbol {
+        font-size: 1.2rem;
+    }
+    
     .module-grid {
         grid-template-columns: 1fr;
     }
