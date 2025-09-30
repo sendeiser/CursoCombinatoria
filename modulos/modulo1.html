@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Módulo 1: Principios Básicos de Conteo - Curso de Combinatoria</title>
     <link rel="stylesheet" href="../styles.css">
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
     <header>
@@ -97,7 +110,7 @@
                             <li>Número de opciones para el plato principal: 6</li>
                             <li>Número de opciones para el postre: 3</li>
                         </ul>
-                        <p>Número total de menús posibles = 4 × 6 × 3 = 72</p>
+                        <p>Número total de menús posibles = \(4 \times 6 \times 3 = 72\)</p>
                     </div>
                     
                     <h4>Ejemplo 2:</h4>
@@ -111,7 +124,7 @@
                             <li>Número de opciones para la segunda letra: 26 (A-Z)</li>
                             <li>Número de opciones para cada dígito: 10 (0-9)</li>
                         </ul>
-                        <p>Número total de contraseñas posibles = 26 × 26 × 10 × 10 × 10 = 676,000</p>
+                        <p>Número total de contraseñas posibles = \(26 \times 26 \times 10 \times 10 \times 10 = 676,000\)</p>
                     </div>
                 </div>
                 <button class="mark-complete btn" data-module-id="modulo1" data-section-id="seccion2">Marcar como completado</button>
@@ -137,7 +150,7 @@
                             <li>Número de opciones para elegir un libro de matemáticas: 25</li>
                             <li>Número de opciones para elegir un libro de física: 30</li>
                         </ul>
-                        <p>Número total de formas de elegir un libro = 25 + 30 = 55</p>
+                        <p>Número total de formas de elegir un libro = \(25 + 30 = 55\)</p>
                     </div>
                     
                     <h4>Ejemplo 2:</h4>
