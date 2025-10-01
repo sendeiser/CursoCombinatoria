@@ -1724,6 +1724,78 @@ body.welcome-page section p {
     text-shadow: none;
 }
 
+/* Estilos para el contenedor de video */
+.video-container {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    border: 2px solid var(--welcome-accent);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.video-container h3 {
+    color: var(--welcome-primary);
+    font-family: var(--welcome-font-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--welcome-accent);
+    padding-bottom: 0.5rem;
+}
+
+/* Wrapper responsivo para el video */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.video-description {
+    color: var(--welcome-dark);
+    font-style: italic;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0.5rem;
+    background: rgba(var(--welcome-light-rgb, 255, 255, 255), 0.7);
+    border-radius: 8px;
+    border-left: 4px solid var(--welcome-accent);
+}
+
+/* Responsive design para dispositivos móviles */
+@media (max-width: 768px) {
+    .video-container {
+        margin: 1.5rem 0;
+        padding: 1rem;
+    }
+    
+    .video-container h3 {
+        font-size: 1.3rem;
+    }
+    
+    .video-description {
+        font-size: 0.9rem;
+    }
+}
+
 body.welcome-page section::before {
     content: '';
     position: absolute;
